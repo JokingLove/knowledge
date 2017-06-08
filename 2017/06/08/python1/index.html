@@ -110,187 +110,93 @@
 
 <div id="content-outer">
   <div id="content-inner">
+    <article id="post">
+  <div class="post-page-title"  style="background-image:url(/knowledge/images/random/vateral-6.png)" >
+  <h2>python 学习笔记1</h2>
+    
+  <p>作者:JokingLove &nbsp&nbsp 发布于:<time datetime="2017-06-08T06:02:10.481Z">
+          2017-06-08
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h2 id="python中的基本数据类型"><a href="#python中的基本数据类型" class="headerlink" title="python中的基本数据类型"></a>python中的基本数据类型</h2><hr>
+<h3 id="Python3中有六个标准的数据类型："><a href="#Python3中有六个标准的数据类型：" class="headerlink" title="Python3中有六个标准的数据类型："></a>Python3中有六个标准的数据类型：</h3><ul>
+<li>字符串（String）<br></li>
+<li>数字（Digit）</li>
+<li>列表（List）</li>
+<li>元组（Tuple）</li>
+<li>集合（Sets）</li>
+<li>字典（Dictionary）</li>
+<li>日期（date）</li>
+<li>布尔 (Boolean)</li>
+<li>数值 (Number)</li>
+</ul>
+<ol>
+<li>整型——int——数字<pre><code>python有5种数字类型，最常见的就是整型int。例如：1234、-1234
+</code></pre></li>
+<li>布尔型——bool——用符号==表示<pre><code>布尔型是一种比较特殊的python数字类型，它只有True和False两种值，它主要用来比较和判断，所得结果叫做布尔值。例如：3==3 给出True，3==5给出False
+</code></pre></li>
+<li>字符串——str——用’ ‘或” “表示<pre><code>例如：&apos;www.iplaypython.com&apos;或者&quot;hello&quot;
+</code></pre></li>
+<li>列表——list——用[ ]符号表示<pre><code>例如：[1,2,3,4]
+</code></pre></li>
+<li>元组——tuple——用( )符号表示<pre><code>例如：（&apos;d&apos;,300）
+</code></pre></li>
+<li>字典——dict——用{ }符号表示<pre><code>例如：｛&apos;name&apos;:&apos;coco&apos;,&apos;country&apos;:&apos;china&apos;｝
+</code></pre></li>
+</ol>
+<p><a href="http://www.diveintopython3.net/" target="_blank" rel="external">更多内容…</a></p>
+
+  </div>
+  <!--评论块-->
+    
+  <div id="disqus_thread" style="padding:30px;text-align: center;border-top:1px solid silver " data-diaque="jokinglove.disqus.com"><button style="margin: 0 auto; " class="btn" onclick="disqus()">加载评论(被墙则无法加载)</button></div>
+
+  <script>
+
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+       var disqus_config = function () {
+       this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+       this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+       };
+       */
+      function disqus() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script'),v = d.createElement('script'),disquUrl=document.getElementById("disqus_thread").dataset.diaque;
+          v.id = 'dsq-count-scr'
+          v.src= '//'+disquUrl+'/count.js';
+          s.src = 'https://'+disquUrl+'/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(v);
+          (d.head || d.body).appendChild(s);
+      }
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
     
 
 
-<div class="tags">
-  
-</div>
-
-<div id="recent-posts">
-  
-      <div class="recent-post-item lazy"  data-original="/knowledge/images/random/vateral-10.png"  >
-        <a class="recent-post-link" href="/knowledge/2017/06/08/python1/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/knowledge/2017/06/08/python1/" >python 学习笔记1</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">JokingLove &nbsp &nbsp 发布于:<time datetime="2017-06-08T06:02:10.481Z">
-              2017-06-08
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/knowledge/tags/language/">language</a></li></ul>
-            
-          <!--分类-->
-
-          分类:
-            
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/knowledge/categories/Python/">Python</a></li></ul>
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/knowledge/2017/06/08/python1/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-      <div class="recent-post-item lazy"  data-original="/knowledge/images/random/vateral-6.png"  >
-        <a class="recent-post-link" href="/knowledge/2017/06/07/hello-hexo/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/knowledge/2017/06/07/hello-hexo/" >hello hexo</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">JokingLove &nbsp &nbsp 发布于:<time datetime="2017-06-07T14:23:40.000Z">
-              2017-06-07
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            暂无标签
-            
-          <!--分类-->
-
-          分类:
-            
-            暂无分类
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/knowledge/2017/06/07/hello-hexo/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-      <div class="recent-post-item lazy"  data-original="/knowledge/images/random/vateral-6.png"  >
-        <a class="recent-post-link" href="/knowledge/2017/06/07/hello-world/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/knowledge/2017/06/07/hello-world/" >Hello World</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">JokingLove &nbsp &nbsp 发布于:<time datetime="2017-06-07T14:18:18.982Z">
-              2017-06-07
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            暂无标签
-            
-          <!--分类-->
-
-          分类:
-            
-            暂无分类
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                Welcome to Hexo
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/knowledge/2017/06/07/hello-world/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-      <div class="recent-post-item lazy"  data-original="/knowledge/images/random/vateral-11.png"  >
-        <a class="recent-post-link" href="/knowledge/2017/04/28/hello/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/knowledge/2017/04/28/hello/" >hello</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">JokingLove &nbsp &nbsp 发布于:<time datetime="2017-04-28T14:00:58.000Z">
-              2017-04-28
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/knowledge/tags/mr-guo/">mr guo</a></li></ul>
-            
-          <!--分类-->
-
-          分类:
-            
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/knowledge/categories/随记/">随记</a></li></ul>
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                小计一笔
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/knowledge/2017/04/28/hello/" >全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-  <nav class="paging">
-    <span class="page-number current">1</span>
+  <!-- Next Nav -->
+    
+  <a href="/knowledge/2017/06/07/hello-hexo/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
 </nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#python中的基本数据类型"><span class="post-toc-number">1.</span> <span class="post-toc-text">python中的基本数据类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Python3中有六个标准的数据类型："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Python3中有六个标准的数据类型：</span></a></li></ol></li></ol>
 </div>
-
-
-
-
+<div class="post-back"><i class="material-icons">arrow_back</i></div>
 
   </div>
 </div>
