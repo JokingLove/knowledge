@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[python 学习笔记1]]></title>
+      <url>/knowledge/2017/06/08/python1/</url>
+      <content type="html"><![CDATA[<h2 id="python中的基本数据类型"><a href="#python中的基本数据类型" class="headerlink" title="python中的基本数据类型"></a>python中的基本数据类型</h2><hr>
+<h3 id="Python3中有六个标准的数据类型："><a href="#Python3中有六个标准的数据类型：" class="headerlink" title="Python3中有六个标准的数据类型："></a>Python3中有六个标准的数据类型：</h3><ul>
+<li>字符串（String）<br></li>
+<li>数字（Digit）</li>
+<li>列表（List）</li>
+<li>元组（Tuple）</li>
+<li>集合（Sets）</li>
+<li>字典（Dictionary）</li>
+<li>日期（date）</li>
+<li>布尔 (Boolean)</li>
+<li>数值 (Number)</li>
+</ul>
+<ol>
+<li>整型——int——数字<pre><code> python有5种数字类型，最常见的就是整型int。例如：1234、-1234
+</code></pre></li>
+<li>布尔型——bool——用符号==表示<pre><code> 布尔型是一种比较特殊的python数字类型，它只有True和False两种值，它主要用来比较和判断，所得结果叫做布尔值。例如：3==3 给出True，3==5给出False
+</code></pre></li>
+<li>字符串——str——用’ ‘或” “表示<pre><code> 例如：&#39;www.iplaypython.com&#39;或者&quot;hello&quot;
+</code></pre></li>
+<li>列表——list——用[ ]符号表示<pre><code> 例如：[1,2,3,4]
+</code></pre></li>
+<li>元组——tuple——用( )符号表示<pre><code> 例如：（&#39;d&#39;,300）
+</code></pre></li>
+<li>字典——dict——用{ }符号表示<pre><code> 例如：｛&#39;name&#39;:&#39;coco&#39;,&#39;country&#39;:&#39;china&#39;｝
+</code></pre></li>
+</ol>
+<p><a href="http://www.diveintopython3.net/" target="_blank" rel="external">更多内容…</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> language </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[hello hexo]]></title>
+      <url>/knowledge/2017/06/07/hello-hexo/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/knowledge/2017/06/07/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[hello]]></title>
+      <url>/knowledge/2017/04/28/hello/</url>
+      <content type="html"><![CDATA[<h2 id="小计一笔"><a href="#小计一笔" class="headerlink" title="小计一笔"></a>小计一笔</h2><p>作为一个做技术的，对所学的技术总结，分享是很重要的，也希望以后多多总结学到的新的东西，分享出来，做一个记录。和更多的人一起去交流，学习。也许，这样才是学习的真正乐趣。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 随记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> mr guo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title><![CDATA[关于]]></title>
+      <url>/knowledge/about/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[photo]]></title>
+      <url>/knowledge/photo/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+  
+</search>
