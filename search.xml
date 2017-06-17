@@ -3,10 +3,65 @@
   
     
     <entry>
+      <title><![CDATA[git 笔记-1]]></title>
+      <url>/knowledge/2017/06/17/git-note1/</url>
+      <content type="html"><![CDATA[<p>今天看到一个博客中对git几个命令的总结，感觉讲的通俗易懂，借过来记一笔</p>
+<ul>
+<li>需求：B要加入A的项目，不论是作为B的初始项目进行二次开发还是成为A项目的一员加入一起开发，步骤如下：</li>
+<li>1.B首先要fork一个。<br>B首先到A的github上，也就是此项目的位置:<a href="https://github.com/A/durit，然后单击fork，然后你（B）的github上就出现了一个fork，位置是：https://github.com/B/durit" target="_blank" rel="external">https://github.com/A/durit，然后单击fork，然后你（B）的github上就出现了一个fork，位置是：https://github.com/B/durit</a></li>
+<li>2.B把自己的fork克隆到本地。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/B/durit</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>(当你clone到本地，会有一个默认的远程名叫”origin”，它指向了fork on github，也就是B上的fork，而不是指向)</p>
+<ul>
+<li>3.现在你是主人，为了保持与A的durit的联系，你需要给A的durit起个名，供你来驱使。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> durit</div><div class="line">$ git remote add upstream https://github.com/A/durit</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>(现在改名为upstream，这名随意，现在你（B）管A的durit叫upstream，以后B就用upstream来和A的durit联系了)</p>
+<ul>
+<li>4.获取A上的更新(但不会修改你的文件)。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git fetch upstream</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>（这不，现在B就用upstream来联系A了）</p>
+<ul>
+<li>5.合并拉取的数据<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git merge upstream/master</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>（又联系了一次，upstream/master，前者是你要合并的数据，后者是你要合并到的数据（在这里就是B本地的durit了））</p>
+<ul>
+<li>6.在B修改了本地部分内容后，把本地的更改推送到B的远程github上。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git add 修改过的文件</div><div class="line">$ git commit -m <span class="string">"注释"</span></div><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>（目前为止，B上的github就跟新了）</p>
+<ul>
+<li><p>7.然后B还想让修改过的内容也推送到A上，这就要发起pull request了。<br>打开B的github,也就是<a href="https://github.com/B/durit" target="_blank" rel="external">https://github.com/B/durit</a><br>点击Pull Requests<br>单击new pull request<br>单击create pull request<br>输入title和你更改的内容<br>然后单击send pull request<br>这样B就完成了工作，然后就等着主人A来操作了。</p>
+</li>
+<li><p>8.在B想要更新A的github上到内容时，结果冲突，因为B和A同时修改了文件，比如说是README.ME，该这样做：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git status(查看冲突文件) //找到冲突文件(README.MD)后，打开并修改，解决冲突后</div><div class="line">$ git add README.MD</div><div class="line">$ git commit -m <span class="string">"解决了冲突文件README.MD"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>现在冲突解决了，可以更新A的内容了，也就是上面第4步和第5步</p>
+]]></content>
+      
+        <categories>
+            
+            <category> git </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> joking </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[python 学习笔记1]]></title>
       <url>/knowledge/2017/06/08/python1/</url>
-      <content type="html"><![CDATA[<h2 id="python中的基本数据类型"><a href="#python中的基本数据类型" class="headerlink" title="python中的基本数据类型"></a>python中的基本数据类型</h2><hr>
-<h3 id="Python3中有六个标准的数据类型："><a href="#Python3中有六个标准的数据类型：" class="headerlink" title="Python3中有六个标准的数据类型："></a>Python3中有六个标准的数据类型：</h3><ul>
+      <content type="html"><![CDATA[<h5 id="Python3中有六个标准的数据类型："><a href="#Python3中有六个标准的数据类型：" class="headerlink" title="Python3中有六个标准的数据类型："></a>Python3中有六个标准的数据类型：</h5><ul>
 <li>字符串（String）<br></li>
 <li>数字（Digit）</li>
 <li>列表（List）</li>
@@ -18,18 +73,12 @@
 <li>数值 (Number)</li>
 </ul>
 <ol>
-<li>整型——int——数字<pre><code> python有5种数字类型，最常见的就是整型int。例如：1234、-1234
-</code></pre></li>
-<li>布尔型——bool——用符号==表示<pre><code> 布尔型是一种比较特殊的python数字类型，它只有True和False两种值，它主要用来比较和判断，所得结果叫做布尔值。例如：3==3 给出True，3==5给出False
-</code></pre></li>
-<li>字符串——str——用’ ‘或” “表示<pre><code> 例如：&#39;www.iplaypython.com&#39;或者&quot;hello&quot;
-</code></pre></li>
-<li>列表——list——用[ ]符号表示<pre><code> 例如：[1,2,3,4]
-</code></pre></li>
-<li>元组——tuple——用( )符号表示<pre><code> 例如：（&#39;d&#39;,300）
-</code></pre></li>
-<li>字典——dict——用{ }符号表示<pre><code> 例如：｛&#39;name&#39;:&#39;coco&#39;,&#39;country&#39;:&#39;china&#39;｝
-</code></pre></li>
+<li>整型——int——数字<br>python有5种数字类型，最常见的就是整型int。例如：1234、-1234</li>
+<li>布尔型——bool——用符号==表示<br>布尔型是一种比较特殊的python数字类型，它只有True和False两种值，它主要用来比较和判断，所得结果叫做布尔值。例如：3==3 给出True，3==5给出False</li>
+<li>字符串——str——用’ ‘或” “表示<br>例如：’www.iplaypython.com’或者”hello”</li>
+<li>列表——list——用[ ]符号表示<br>例如：[1,2,3,4]</li>
+<li>元组——tuple——用( )符号表示<br>例如：（’d’,300）</li>
+<li>字典——dict——用{ }符号表示<br>例如：｛’name’:’coco’,’country’:’china’｝</li>
 </ol>
 <p><a href="http://www.diveintopython3.net/" target="_blank" rel="external">更多内容…</a></p>
 ]]></content>
@@ -61,17 +110,13 @@
       <title><![CDATA[Hello World]]></title>
       <url>/knowledge/2017/06/07/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
-</code></pre>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
       
