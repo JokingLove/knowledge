@@ -160,9 +160,14 @@
   
     
     <entry>
-      <title><![CDATA[友情链接]]></title>
-      <url>/knowledge/friends/index.html</url>
-      <content type="html"></content>
+      <title></title>
+      <url>/knowledge/photos/index.html</url>
+      <content type="html"><![CDATA[<p><link type="text/css" href="/knowledge/css/jquery.fancybox.css" rel="stylesheet"></p>
+<p><div class="instagram"><section class="archives album"><ul class="img-box-ul"></ul></section></div></p>
+<script src="/knowledge/js/jquery-1.8.2.min.js"></script>
+<script src="/knowledge/js/jquery.lazyload.min.js"></script>
+<script src="/knowledge/js/jquery.fancybox.js"></script>
+<script src="/knowledge/js/photo.js"></script>]]></content>
     </entry>
     
     <entry>
@@ -172,14 +177,9 @@
     </entry>
     
     <entry>
-      <title></title>
-      <url>/knowledge/photos/index.html</url>
-      <content type="html"><![CDATA[<p><link type="text/css" href="/knowledge/css/jquery.fancybox.css" rel="stylesheet"></p>
-<p><div class="instagram"><section class="archives album"><ul class="img-box-ul"></ul></section></div></p>
-<script src="/knowledge/js/jquery-1.8.2.min.js"></script>
-<script src="/knowledge/js/jquery.lazyload.min.js"></script>
-<script src="/knowledge/js/jquery.fancybox.js"></script>
-<script src="/knowledge/js/photo.js"></script>]]></content>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
