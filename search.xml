@@ -164,11 +164,23 @@
   
     
     <entry>
+      <title><![CDATA[关于]]></title>
+      <url>/knowledge/about/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title></title>
       <url>/knowledge/comment/index.html</url>
       <content type="html"><![CDATA[hello
 
-<div id="comments" class="comments cloud-tie-wrapper" style="width:500px; height:500px;"></div>
+<div id="comments" class="comments cloud-tie-wrapper"></div>
 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
 <script>
   var cloudTieConfig = {
@@ -181,18 +193,6 @@
   Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
 </script>
 <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[关于]]></title>
-      <url>/knowledge/about/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[友情链接]]></title>
-      <url>/knowledge/friends/index.html</url>
-      <content type="html"></content>
     </entry>
     
     <entry>
