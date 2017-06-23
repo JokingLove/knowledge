@@ -100,32 +100,32 @@
  */
 @font-face {
   font-family: "HomizioNova";
-  src: url("//7xs305.com1.z0.glb.clouddn.com/homizio-nova/light.ttf"), url("//7xs305.com1.z0.glb.clouddn.com/homizio-nova/light.otf");
+  src: url("http://ory1lv7jy.bkt.clouddn.com/homizio-nova/light.ttf"), url("http://ory1lv7jy.bkt.clouddn.com/homizio-nova/light.otf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "HomizioNova";
-  src: url("//7xs305.com1.z0.glb.clouddn.com/homizio-nova/light_italic.ttf"), url("//7xs305.com1.z0.glb.clouddn.com/homizio-nova/light_italic.otf");
+  src: url("http://ory1lv7jy.bkt.clouddn.com/homizio-nova/light_italic.ttf"), url("http://ory1lv7jy.bkt.clouddn.com/homizio-nova/light_italic.otf");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "HomizioNova";
-  src: url("//7xs305.com1.z0.glb.clouddn.com/homizio-nova/regular.ttf"), url("//7xs305.com1.z0.glb.clouddn.com/homizio-nova/regular.otf");
+  src: url("http://ory1lv7jy.bkt.clouddn.com/homizio-nova/regular.ttf"), url("http://ory1lv7jy.bkt.clouddn.com/homizio-nova/regular.otf");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "HomizioNova";
-  src: url("//7xs305.com1.z0.glb.clouddn.com/homizio-nova/italic.ttf"), url("//7xs305.com1.z0.glb.clouddn.com/homizio-nova/italic.otf");
+  src: url("http://ory1lv7jy.bkt.clouddn.com/homizio-nova/italic.ttf"), url("http://ory1lv7jy.bkt.clouddn.com/homizio-nova/italic.otf");
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: 'icomoon';
-  src: url("//7xs305.com1.z0.glb.clouddn.com/icomoon.eot?e2xg5y"), url("./fonts/icomoon/icomoon.eot?e2xg5y");
-  src: url("//7xs305.com1.z0.glb.clouddn.com/icomoon.eot?#iefixe2xg5y") format('embedded-opentype'), url("//7xs305.com1.z0.glb.clouddn.com/icomoon.woff?e2xg5y") format('woff'), url("//7xs305.com1.z0.glb.clouddn.com/icomoon.ttf?e2xg5y") format('truetype'), url("//7xs305.com1.z0.glb.clouddn.com/icomoon.svg?e2xg5y#icomoon") format('svg'), url("./fonts/icomoon/icomoon.eot?#iefixe2xg5y") format('embedded-opentype'), url("./fonts/icomoon/icomoon.woff?e2xg5y") format('woff'), url("./fonts/icomoon/icomoon.ttf?e2xg5y") format('truetype'), url("./fonts/icomoon/icomoon.svg?e2xg5y#icomoon") format('svg');
+  src: url("http://ory1lv7jy.bkt.clouddn.com/icomoon.eot?e2xg5y"), url("./fonts/icomoon/icomoon.eot?e2xg5y");
+  src: url("http://ory1lv7jy.bkt.clouddn.com/icomoon.eot?#iefixe2xg5y") format('embedded-opentype'), url("http://ory1lv7jy.bkt.clouddn.com/icomoon.woff?e2xg5y") format('woff'), url("http://ory1lv7jy.bkt.clouddn.com/icomoon.ttf?e2xg5y") format('truetype'), url("http://ory1lv7jy.bkt.clouddn.com/icomoon.svg?e2xg5y#icomoon") format('svg'), url("./fonts/icomoon/icomoon.eot?#iefixe2xg5y") format('embedded-opentype'), url("./fonts/icomoon/icomoon.woff?e2xg5y") format('woff'), url("./fonts/icomoon/icomoon.ttf?e2xg5y") format('truetype'), url("./fonts/icomoon/icomoon.svg?e2xg5y#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }

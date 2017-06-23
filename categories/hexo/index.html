@@ -155,16 +155,7 @@
     <div class="post-content">
         <div class="post-excerpt">
             
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br>
             
             <p class="more">
                 <a href="http://jokinglove.com/knowledge/2017/06/07/hello-world/">阅读剩下更多</a>
@@ -173,7 +164,7 @@
         <div class="post-thumbnail" data-img="">
             <a href="http://jokinglove.com/knowledge/2017/06/07/hello-world/" title="Hello World">
                 
-                    <img class="thumbnail" src="/knowledge/img/default.png" data-echo="//7xs305.com1.z0.glb.clouddn.com/thumbnail/7.jpg" alt="默认配图" >
+                    <img class="thumbnail" src="/knowledge/img/default.png" data-echo="http://ory1lv7jy.bkt.clouddn.com/images/7.jpg" alt="默认配图" >
                 
             </a>
         </div>
@@ -223,12 +214,12 @@
 <ul class="widget-bd">
     
     <li>
-        <a href="/knowledge/categories/git/">git</a>
+        <a href="/knowledge/categories/随记/">随记</a>
         <span class="badge">(1)</span>
     </li>
     
     <li>
-        <a href="/knowledge/categories/随记/">随记</a>
+        <a href="/knowledge/categories/git/">git</a>
         <span class="badge">(1)</span>
     </li>
     
@@ -251,9 +242,9 @@
         <!-- 文章标签 -->
 <div class="widget-bd tag-wrap">
   
-    <a class="tag-item" href="/knowledge/tags/joking/" title="joking">joking (1)</a>
-  
     <a class="tag-item" href="/knowledge/tags/mr-guo/" title="mr guo">mr guo (1)</a>
+  
+    <a class="tag-item" href="/knowledge/tags/joking/" title="joking">joking (1)</a>
   
     <a class="tag-item" href="/knowledge/tags/language/" title="language">language (1)</a>
   
@@ -261,40 +252,6 @@
     </section>
     
 
-    
-    <!-- 我的微博 -->
-    <section class="widget">
-        <h3 class="widget-hd"><strong>我的微博</strong></h3>
-        <div class="widget-bd" style="position: relative;">
-  <div id="myWeiboLoading" class="text-center" style="position:absolute;top:0;left:0;right:0;bottom:0;line-height:50px;font-size:12px;background-color:#fff;z-index:9;">微博加载中...</div>
-  <iframe id="myWeibo" width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2376003112&verifier=796ea597&dpc=1"></iframe>
-  <script>
-  (function () {
-    var oMyWeibo = document.getElementById('myWeibo');
-    var oMyWeiboLoading = document.getElementById('myWeiboLoading');
-    var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
-    var timer = null;
-    if (isIE) {
-      oMyWeibo.onreadystatechange = function(){
-        if(oMyWeibo.readyState === 'loaded' || oMyWeibo.readyState === 'complete'){
-          timer = setTimeout(function () {
-            oMyWeiboLoading.parentNode.removeChild(oMyWeiboLoading);
-            timer = null;
-          }, 300);
-        }
-      };
-    } else {
-      oMyWeibo.onload = function () {
-        timer = setTimeout(function () {
-          oMyWeiboLoading.parentNode.removeChild(oMyWeiboLoading);
-          timer = null;
-        }, 300);
-      };
-    }
-  })();
-  </script>
-</div>
-    </section>
     
 
     
