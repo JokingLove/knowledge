@@ -164,12 +164,6 @@
   
     
     <entry>
-      <title><![CDATA[关于]]></title>
-      <url>/knowledge/about/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title></title>
       <url>/knowledge/comment/index.html</url>
       <content type="html"><![CDATA[hello
@@ -192,6 +186,12 @@
     <entry>
       <title><![CDATA[友情链接]]></title>
       <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于]]></title>
+      <url>/knowledge/about/index.html</url>
       <content type="html"></content>
     </entry>
     
