@@ -170,30 +170,21 @@
     </entry>
     
     <entry>
-      <title></title>
-      <url>/knowledge/comment/index.html</url>
-      <content type="html"><![CDATA[hello
-
-<div id="comments" class="comments cloud-tie-wrapper"></div>
-<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-<script>
-  var cloudTieConfig = {
-    url: document.location.href, 
-    sourceId: document.location.href,
-    productKey: "5a74384c010c4e11824e4d9bc455e2d4",
-    target: "comments"
-  };
-  var yunManualLoad = true;
-  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-</script>
-<script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>]]></content>
+      <title><![CDATA[实验室]]></title>
+      <url>/knowledge/lab/index.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[实验室]]></title>
-      <url>/knowledge/lab/index.html</url>
-      <content type="html"><![CDATA[<p>正在建设中……</p>
-]]></content>
+      <title><![CDATA[留言]]></title>
+      <url>/knowledge/comment/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
@@ -211,12 +202,6 @@
       <title></title>
       <url>/knowledge/photos/output.json</url>
       <content type="html"><![CDATA[["1_b.jpg","1_s.jpg","2_b.jpg","2_s.jpg","3_b.jpg","3_s.jpg","4_b.jpg","4_s.jpg","5_b.jpg","5_s.jpg"]]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[友情链接]]></title>
-      <url>/knowledge/friends/index.html</url>
-      <content type="html"></content>
     </entry>
     
   
