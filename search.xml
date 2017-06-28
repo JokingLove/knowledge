@@ -3,24 +3,6 @@
   
     
     <entry>
-      <title></title>
-      <url>/knowledge/2017/06/20/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8E%9F%E5%88%99/</url>
-      <content type="html"><![CDATA[<h4 id="二、设计模式的六大原则"><a href="#二、设计模式的六大原则" class="headerlink" title="二、设计模式的六大原则"></a>二、设计模式的六大原则</h4><ul>
-<li><p>1、开闭原则（Open Close Principle）<br>开闭原则就是说对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。<a id="more"></a>所以一句话概括就是：为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。</p>
-</li>
-<li><p>2、里氏代换原则（Liskov Substitution Principle）<br>里氏代换原则(Liskov Substitution Principle LSP)面向对象设计的基本原则之一。 里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现。 LSP是继承复用的基石，只有当衍生类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。里氏代换原则是对“开-闭”原则的补充。实现“开-闭”原则的关键步骤就是抽象化。而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。—— From Baidu 百科</p>
-</li>
-<li>3、依赖倒转原则（Dependence Inversion Principle）<br>这个是开闭原则的基础，具体内容：真对接口编程，依赖于抽象而不依赖于具体。</li>
-<li>4、接口隔离原则（Interface Segregation Principle）<br>这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。还是一个降低类之间的耦合度的意思，从这儿我们看出，其实设计模式就是一个软件的设计思想，从大型软件架构出发，为了升级和维护方便。所以上文中多次出现：降低依赖，降低耦合。</li>
-<li>5、迪米特法则（最少知道原则）（Demeter Principle）<br>为什么叫最少知道原则，就是说：一个实体应当尽量少的与其他实体之间发生相互作用，使得系统功能模块相对独立。</li>
-<li>6、合成复用原则（Composite Reuse Principle）<br>原则是尽量使用合成/聚合的方式，而不是使用继承。</li>
-</ul>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[git 笔记 fork]]></title>
       <url>/knowledge/2017/06/17/git-note1/</url>
       <content type="html"><![CDATA[<p>今天看到一个博客中对git几个命令的总结，感觉讲的通俗易懂，借过来记一笔<br><a id="more"></a></p>
@@ -63,14 +45,14 @@
       
         <categories>
             
-            <category> git </category>
+            <category> 宝刀 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> joking </tag>
+            <tag> git </tag>
             
         </tags>
         
@@ -103,14 +85,14 @@
       
         <categories>
             
-            <category> Python </category>
+            <category> IT </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> language </tag>
+            <tag> language, python </tag>
             
         </tags>
         
@@ -132,10 +114,16 @@
       
         <categories>
             
-            <category> hexo </category>
+            <category> 其他 </category>
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> hexo, 博客 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -147,14 +135,44 @@
       
         <categories>
             
-            <category> 随记 </category>
+            <category> 瞎写 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> mr guo </tag>
+            <tag> 随记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[设计模式的六大原则]]></title>
+      <url>/knowledge/2016/04/28/java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8E%9F%E5%88%99/</url>
+      <content type="html"><![CDATA[<h4 id="二、设计模式的六大原则"><a href="#二、设计模式的六大原则" class="headerlink" title="二、设计模式的六大原则"></a>二、设计模式的六大原则</h4><ul>
+<li><p>1、开闭原则（Open Close Principle）<br>开闭原则就是说对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。<a id="more"></a>所以一句话概括就是：为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。</p>
+</li>
+<li><p>2、里氏代换原则（Liskov Substitution Principle）<br>里氏代换原则(Liskov Substitution Principle LSP)面向对象设计的基本原则之一。 里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现。 LSP是继承复用的基石，只有当衍生类可以替换掉基类，软件单位的功能不受到影响时，基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。里氏代换原则是对“开-闭”原则的补充。实现“开-闭”原则的关键步骤就是抽象化。而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。—— From Baidu 百科</p>
+</li>
+<li>3、依赖倒转原则（Dependence Inversion Principle）<br>这个是开闭原则的基础，具体内容：真对接口编程，依赖于抽象而不依赖于具体。</li>
+<li>4、接口隔离原则（Interface Segregation Principle）<br>这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。还是一个降低类之间的耦合度的意思，从这儿我们看出，其实设计模式就是一个软件的设计思想，从大型软件架构出发，为了升级和维护方便。所以上文中多次出现：降低依赖，降低耦合。</li>
+<li>5、迪米特法则（最少知道原则）（Demeter Principle）<br>为什么叫最少知道原则，就是说：一个实体应当尽量少的与其他实体之间发生相互作用，使得系统功能模块相对独立。</li>
+<li>6、合成复用原则（Composite Reuse Principle）<br>原则是尽量使用合成/聚合的方式，而不是使用继承。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> IT </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
         
@@ -170,12 +188,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[实验室]]></title>
-      <url>/knowledge/lab/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[留言]]></title>
       <url>/knowledge/comment/index.html</url>
       <content type="html"></content>
@@ -184,6 +196,12 @@
     <entry>
       <title><![CDATA[友情链接]]></title>
       <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[实验室]]></title>
+      <url>/knowledge/lab/index.html</url>
       <content type="html"></content>
     </entry>
     
