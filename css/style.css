@@ -1127,13 +1127,18 @@ pre .javascript .function {
 }
 .widget .widget-bd .tag-item {
   float: left;
-  width: 32.6666%;
-  margin: 0 1% 1% 0;
+  margin: 0 1% 1% 2%;
+  border: 1px solid #eee;
+  -ms-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
   padding: 0 8px;
   line-height: 29px;
   font-size: 12px;
   color: #999;
-  background-color: #f6f6f6;
+  background-color: #00ff7f;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1154,7 +1159,7 @@ pre .javascript .function {
 }
 .widget .widget-bd .tag-item:hover {
   color: #fff;
-  background-color: #ff5e52;
+  background-color: #008b00;
   opacity: 0.85;
 }
 .widget .widget-bd .tag-item:nth-child(3n+0) {

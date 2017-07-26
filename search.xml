@@ -45,7 +45,7 @@
       
         <categories>
             
-            <category> 宝刀 </category>
+            <category> 上古神器 </category>
             
         </categories>
         
@@ -182,14 +182,14 @@
   
     
     <entry>
-      <title><![CDATA[关于]]></title>
-      <url>/knowledge/about/index.html</url>
+      <title><![CDATA[留言]]></title>
+      <url>/knowledge/comment/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[留言]]></title>
-      <url>/knowledge/comment/index.html</url>
+      <title><![CDATA[关于]]></title>
+      <url>/knowledge/about/index.html</url>
       <content type="html"></content>
     </entry>
     
@@ -197,18 +197,6 @@
       <title><![CDATA[友情链接]]></title>
       <url>/knowledge/friends/index.html</url>
       <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[实验室]]></title>
-      <url>/knowledge/lab/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title></title>
-      <url>/knowledge/photos/output.json</url>
-      <content type="html"><![CDATA[["1_b.jpg","1_s.jpg","2_b.jpg","2_s.jpg","3_b.jpg","3_s.jpg","4_b.jpg","4_s.jpg","5_b.jpg","5_s.jpg"]]]></content>
     </entry>
     
     <entry>
@@ -220,6 +208,18 @@
 <script src="/knowledge/js/jquery.lazyload.min.js"></script>
 <script src="/knowledge/js/jquery.fancybox.js"></script>
 <script src="/knowledge/js/photo.js"></script>]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>/knowledge/photos/output.json</url>
+      <content type="html"><![CDATA[["1_b.jpg","1_s.jpg","2_b.jpg","2_s.jpg","3_b.jpg","3_s.jpg","4_b.jpg","4_s.jpg","5_b.jpg","5_s.jpg"]]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[实验室]]></title>
+      <url>/knowledge/lab/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
