@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>`IT`分类下的文章 | JOKING</title>
+    <title>类与类之间的关系 | JOKING</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="JokingLove, 前端, Web, java, 博客，" >
     <meta name="description" content="JOKING 个人前端小站" >
@@ -60,19 +60,19 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/knowledge/categories/IT/index.html" class="item ">
+            <li rel="/knowledge/2017/08/01/class-relationship/index.html" class="item ">
                 <a href="/knowledge/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/knowledge/categories/IT/index.html" class="item ">
+            <li rel="/knowledge/2017/08/01/class-relationship/index.html" class="item ">
                 <a href="/knowledge/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
             </li>
             
-            <li rel="/knowledge/categories/IT/index.html" class="item ">
+            <li rel="/knowledge/2017/08/01/class-relationship/index.html" class="item ">
                 <a href="/knowledge/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/knowledge/categories/IT/index.html" class="item ">
+            <li rel="/knowledge/2017/08/01/class-relationship/index.html" class="item ">
                 <a href="/knowledge/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -122,65 +122,38 @@
     <div class="container body clearfix">
         <section class="content">
             <div class="content-main widget">
-                <!-- 文章分类 -->
-
-    <h3 class="widget-hd">
-        <strong>
-            
-                `IT`分类下的文章
-            
-        </strong>
-    </h3>
-    
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        
-        <a class="cat-link" href="/knowledge/categories/IT/">IT</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://jokinglove.com/knowledge/2017/08/01/class-relationship/">
-    		类与类之间的关系
-    	</a>
-    </h3>
-
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>类与类之间的关系</span></h3>
     </header>
-    <p class="post-meta">
+    <p class="post-meta text-center">
         JOKING 发表于
         <time datetime="2017-07-31T16:00:00.000Z">2017-08-01</time>
     </p>
-
     <div class="post-content">
-        <div class="post-excerpt">
-            
-                <p>在面向对象分析的过程中，我们常常会首先分析类与类之间有什么关系，然后设计出合理的类结构，尽量达到低耦合，高内聚。使得程序的可扩展性更高，下面简单的总结一下在面向对象的世界里类与类之间的关系。
-            
-            <p class="more">
-                <a href="http://jokinglove.com/knowledge/2017/08/01/class-relationship/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://jokinglove.com/knowledge/2017/08/01/class-relationship/" title="类与类之间的关系">
-                
-                    <img class="thumbnail" src="/knowledge/img/default.png" data-echo="http://ory1lv7jy.bkt.clouddn.com/images/1.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
+        <p>在面向对象分析的过程中，我们常常会首先分析类与类之间有什么关系，然后设计出合理的类结构，尽量达到低耦合，高内聚。使得程序的可扩展性更高，下面简单的总结一下在面向对象的世界里类与类之间的关系。<a id="more"></a></p>
+<ul>
+<li><p>1、泛化关系(generalization)<br>类的继承结构表现在UML中为：泛化(generalize)与实现(realize)：<br>继承关系为 is-a的关系；两个对象之间如果可以用 is-a 来表示，就是继承关系：（..是..)<br>eg：自行车是车、猫是动物<br>泛化关系用一条带空心箭头的直接表示；<br><font color="red">注：</font>最终代码中，泛化关系表现为继承非抽象类；</p>
+</li>
+<li><p>2、实现关系(realize)<br>实现关系用一条带空心箭头的虚线表示；<br>eg：”车”为一个抽象概念，在现实中并无法直接用来定义对象；只有指明具体的子类(汽车还是自行车)，才 可以用来定义对象（”车”这个类在C++中用抽象类表示，在JAVA中有接口这个概念，更容易理解）<br><font color="red">注：</font>最终代码中，实现关系表现为继承抽象类；</p>
+</li>
+<li><p>3、聚合关系(aggregation)<br>聚合关系用一条带空心菱形箭头的直线表示，如下图表示A聚合到B上，或者说B由A组成；<br>聚合关系用于表示实体对象之间的关系，表示整体由部分构成的语义；例如一个部门由多个员工组成；<br>与组合关系不同的是，整体和部分不是强依赖的，即使整体不存在了，部分仍然存在；例如， 部门撤销了，人员不会消失，他们依然存在；</p>
+</li>
+<li><p>4、组合关系(composition)<br>组合关系用一条带实心菱形箭头直线表示，如下图表示A组成B，或者B由A组成；<br>与聚合关系一样，组合关系同样表示整体由部分构成的语义；比如公司由多个部门组成；<br>但组合关系是一种强依赖的特殊聚合关系，如果整体不存在了，则部分也不存在了；例如， 公司不存在了，部门也将不存在了；</p>
+</li>
+<li><p>5、关联关系(association)<br>关联关系是用一条直线表示的；它描述不同类的对象之间的结构关系；它是一种静态关系， 通常与运行状态无关，一般由常识等因素决定的；它一般用来定义对象之间静态的、天然的结构； 所以，关联关系是一种“强关联”的关系；<br>比如，乘车人和车票之间就是一种关联关系；学生和学校就是一种关联关系；<br>关联关系默认不强调方向，表示对象间相互知道；如果特别强调方向，如下图，表示A知道B，但 B不知道A；<br><font color="red">注：</font>在最终代码中，关联对象通常是以成员变量的形式实现的；</p>
+</li>
+<li><p>6、依赖关系(dependency)<br>依赖关系是用一套带箭头的虚线表示的；如下图表示A依赖于B；他描述一个对象在运行期间会用到另一个对象的关系；<br>与关联关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化； 依赖关系也可能发生变化；<br>显然，依赖也有方向，双向依赖是一种非常糟糕的结构，我们总是应该保持单向依赖，杜绝双向依赖的产生；<br><font color="red">注：</font>在最终代码中，依赖关系体现为类构造方法及类方法的传入参数，箭头的指向为调用关系；依赖关系除了临时知道对方外，还是“使用”对方的方法和属性；</p>
+</li>
+</ul>
+
     </div>
     <p class="post-meta">
-        
-        评论：<a href="http://jokinglove.com/knowledge/2017/08/01/class-relationship/#comments" class="post-comments">
-            <span 
-              lang="join-count" 
-              class="join-count" 
-              data-url="http://jokinglove.com/knowledge/2017/08/01/class-relationship/" 
-              data-sourceId="class-relationship"
-            >0</span>
-        </a>
-        
-        <!-- 标签 -->
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/knowledge/categories/IT/">IT</a>
+        </span>
         <span class="post-tags">
             标签：
             
@@ -191,159 +164,46 @@
         </span>
     </p>
 </article>
+<div class="article-share clearfix text-center">
+    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
 
-<!-- JavaScript 配置 -->
-<script>
-  var yunTieProductKey = "5a74384c010c4e11824e4d9bc455e2d4";
-  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
-</script>
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="javascript: void(0);">没有上一篇了</a>
+    </span>
+    
 
     
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        
-        <a class="cat-link" href="/knowledge/categories/IT/">IT</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://jokinglove.com/knowledge/2017/06/08/python1/">
-    		python 学习笔记1
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        JOKING 发表于
-        <time datetime="2017-06-08T06:02:10.481Z">2017-06-08</time>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
+    <span class="next fr">
+        下一篇<br >
+        <a href="/knowledge/2017/06/17/git-note1/">
             
-                <h5 id="Python3中有六个标准的数据类型："><a href="#Python3中有六个标准的数据类型：" class="headerlink" title="Python3中有六个标准的数据类型："></a>Python3中有六个标准的数据类型：</h5><ul>
-<li>字符串（String）<br></li>
-<li>数字（Digit）</li>
-<li>列表（List）
+                git 笔记 fork
             
-            <p class="more">
-                <a href="http://jokinglove.com/knowledge/2017/06/08/python1/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://jokinglove.com/knowledge/2017/06/08/python1/" title="python 学习笔记1">
-                
-                    <img class="thumbnail" src="/knowledge/img/default.png" data-echo="http://ory1lv7jy.bkt.clouddn.com/images/8.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
-    </div>
-    <p class="post-meta">
-        
-        评论：<a href="http://jokinglove.com/knowledge/2017/06/08/python1/#comments" class="post-comments">
-            <span 
-              lang="join-count" 
-              class="join-count" 
-              data-url="http://jokinglove.com/knowledge/2017/06/08/python1/" 
-              data-sourceId="python1"
-            >0</span>
         </a>
-        
-        <!-- 标签 -->
-        <span class="post-tags">
-            标签：
-            
+    </span>
     
-        <a href="/knowledge/tags/python/" title="python">python</a>
-    
+</div>
 
-        </span>
-    </p>
-</article>
+<!-- 文章评论 -->
 
-<!-- JavaScript 配置 -->
-<script>
-  var yunTieProductKey = "5a74384c010c4e11824e4d9bc455e2d4";
-  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
-</script>
-
-    
-        <!-- 文章 -->
-<article class="post">
-    <header>
-        
-        <a class="cat-link" href="/knowledge/categories/IT/">IT</a>
-        
-        <!-- 文章标题 -->
-        
-    <h3 class="post-title">
-    	<a href="http://jokinglove.com/knowledge/2016/04/28/java设计模式的原则/">
-    		设计模式的六大原则
-    	</a>
-    </h3>
-
-    </header>
-    <p class="post-meta">
-        JOKING 发表于
-        <time datetime="2016-04-28T14:00:58.000Z">2016-04-28</time>
-    </p>
-
-    <div class="post-content">
-        <div class="post-excerpt">
-            
-                <h4 id="二、设计模式的六大原则"><a href="#二、设计模式的六大原则" class="headerlink" title="二、设计模式的六大原则"></a>二、设计模式的六大原则</h4><ul>
-<li><p>1、开闭原则（Open Close Principle）<br>开闭原则就是说对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。
-            
-            <p class="more">
-                <a href="http://jokinglove.com/knowledge/2016/04/28/java设计模式的原则/">阅读剩下更多</a>
-            </p>
-        </div>
-        <div class="post-thumbnail" data-img="">
-            <a href="http://jokinglove.com/knowledge/2016/04/28/java设计模式的原则/" title="设计模式的六大原则">
-                
-                    <img class="thumbnail" src="/knowledge/img/default.png" data-echo="http://ory1lv7jy.bkt.clouddn.com/images/8.jpg" alt="默认配图" >
-                
-            </a>
-        </div>
-    </div>
-    <p class="post-meta">
-        
-        评论：<a href="http://jokinglove.com/knowledge/2016/04/28/java设计模式的原则/#comments" class="post-comments">
-            <span 
-              lang="join-count" 
-              class="join-count" 
-              data-url="http://jokinglove.com/knowledge/2016/04/28/java设计模式的原则/" 
-              data-sourceId="java设计模式的原则"
-            >0</span>
-        </a>
-        
-        <!-- 标签 -->
-        <span class="post-tags">
-            标签：
-            
-    
-        <a href="/knowledge/tags/设计模式/" title="设计模式">设计模式</a>
-    
-
-        </span>
-    </p>
-</article>
-
-<!-- JavaScript 配置 -->
-<script>
-  var yunTieProductKey = "5a74384c010c4e11824e4d9bc455e2d4";
-  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
-</script>
-
-    
-
-    
-    <nav class="page-navigator">
-        <span class="page-number current">1</span>
-    </nav>
-    
-
+    <div id="comments" class="comments cloud-tie-wrapper"></div>
+    <script>
+    var cloudTieConfig = {
+      url: document.location.href, 
+      sourceId: "class-relationship",
+      productKey: "5a74384c010c4e11824e4d9bc455e2d4",
+      target: "comments"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+    </script>
 
             </div>
 
