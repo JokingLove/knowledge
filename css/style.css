@@ -829,11 +829,18 @@ hr {
   padding: 3px 7px;
   border: none;
   color: #fff;
-  background-color: #51cc87;
+  color: #4e97d8;
+  border: 1px solid #4e97d8;
+  -ms-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
   opacity: 0.8;
 }
 .post-content .more a:hover {
-  opacity: 0.75;
+  opacity: 0.9;
+  color: #00f;
 }
 .post-content blockquote {
   margin: 1em 0;
@@ -1128,17 +1135,16 @@ pre .javascript .function {
 .widget .widget-bd .tag-item {
   float: left;
   margin: 0 1% 1% 2%;
-  border: 1px solid #eee;
-  -ms-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
+  border: 1px solid #67ff52;
+  -ms-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
   padding: 0 8px;
   line-height: 29px;
   font-size: 12px;
   color: #999;
-  background-color: #00ff7f;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
