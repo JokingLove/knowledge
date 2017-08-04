@@ -217,18 +217,6 @@
   
     
     <entry>
-      <title><![CDATA[留言]]></title>
-      <url>/knowledge/comment/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[实验室]]></title>
-      <url>/knowledge/lab/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>/knowledge/about/index.html</url>
       <content type="html"></content>
@@ -237,6 +225,18 @@
     <entry>
       <title><![CDATA[友情链接]]></title>
       <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[留言]]></title>
+      <url>/knowledge/comment/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[实验室]]></title>
+      <url>/knowledge/lab/index.html</url>
       <content type="html"></content>
     </entry>
     
