@@ -33,9 +33,6 @@
 
 
     
-    <script>var yunModuleEnv = true;</script>
-    <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-    
 <link rel="stylesheet" href="/knowledge/css/prism.css" type="text/css"></head>
 
 <body class="home">
@@ -140,17 +137,28 @@
 </p>
 
 
-  <div id="comments" class="comments cloud-tie-wrapper"></div>
-  <script>
-  var cloudTieConfig = {
-    url: document.location.href, 
-    sourceId: "comment",
-    productKey: "5a74384c010c4e11824e4d9bc455e2d4",
-    target: "comments"
-  };
-  var yunManualLoad = true;
-  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = '评论'; 
+      
+      var disqus_identifier = '/comment/index.html';
+      var disqus_title = '留言';
+      var disqus_url = 'http://jokinglove.com/knowledge/comment/index.html';
+      
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              //dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+              dsq.src = 'https://a.disquscdn.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
   </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 
         
     </div>
@@ -200,11 +208,11 @@
 	  
     	<a class="tag-item" href="/knowledge/tags/hexo/" title="(1)">hexo</a>
 	  
-    	<a class="tag-item" href="/knowledge/tags/python/" title="(1)">python</a>
-	  
     	<a class="tag-item" href="/knowledge/tags/随记/" title="(1)">随记</a>
 	  
     	<a class="tag-item" href="/knowledge/tags/设计模式/" title="(1)">设计模式</a>
+	  
+    	<a class="tag-item" href="/knowledge/tags/python/" title="(1)">python</a>
 	  
 </div>
     </section>
