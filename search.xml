@@ -223,14 +223,14 @@
     </entry>
     
     <entry>
-      <title><![CDATA[留言]]></title>
-      <url>/knowledge/comment/index.html</url>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[友情链接]]></title>
-      <url>/knowledge/friends/index.html</url>
+      <title><![CDATA[留言]]></title>
+      <url>/knowledge/comment/index.html</url>
       <content type="html"></content>
     </entry>
     
