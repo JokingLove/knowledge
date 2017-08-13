@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>留言 | JOKING</title>
+    <title>spring容器初始化的几种方式 | JOKING</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="JokingLove, 前端, Web, java, 博客，" >
     <meta name="description" content="JOKING 个人前端小站" >
@@ -57,19 +57,19 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/knowledge/comment/index.html" class="item ">
+            <li rel="/knowledge/2017/08/13/spring-容器初始化的几种方式/index.html" class="item ">
                 <a href="/knowledge/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/knowledge/comment/index.html" class="item ">
+            <li rel="/knowledge/2017/08/13/spring-容器初始化的几种方式/index.html" class="item ">
                 <a href="/knowledge/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
             </li>
             
-            <li rel="/knowledge/comment/index.html" class="item ">
+            <li rel="/knowledge/2017/08/13/spring-容器初始化的几种方式/index.html" class="item ">
                 <a href="/knowledge/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/knowledge/comment/index.html" class="item current">
+            <li rel="/knowledge/2017/08/13/spring-容器初始化的几种方式/index.html" class="item ">
                 <a href="/knowledge/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -119,33 +119,71 @@
     <div class="container body clearfix">
         <section class="content">
             <div class="content-main widget">
-                <!-- 独立页面 -->
+                <!-- 文章页 -->
+<!-- 文章 -->
 <article class="post article">
     <header class="text-center">
-        <h4 class="post-title"><a href="javascript: void(0);">留言</a></h4>
+        <h3 class="post-title"><span>spring容器初始化的几种方式</span></h3>
     </header>
+    <p class="post-meta text-center">
+        JOKING 发表于
+        <time datetime="2017-08-13T13:10:25.428Z">2017-08-13</time>
+    </p>
     <div class="post-content">
-        
-            <!-- 自定义留言页 -->
+        <p>spring 通常有五种初始化的方式，代码如下：<br><a id="more"></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> ssh.spring;</div><div class="line"> </div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"> </div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.BeanFactory;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.xml.XmlBeanFactory;</div><div class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</div><div class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</div><div class="line"><span class="keyword">import</span> org.springframework.core.io.ClassPathResource;</div><div class="line"><span class="keyword">import</span> org.springframework.core.io.FileSystemResource;</div><div class="line"><span class="keyword">import</span> org.springframework.core.io.Resource;</div><div class="line"> </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span>&#123;</div><div class="line">      ApplicationContext ac=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"ssh/spring/applicationContext.xml"</span>);</div><div class="line">      Person p1=(Person)ac.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test1 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span>&#123;</div><div class="line">      ApplicationContext ac=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>,<span class="keyword">this</span>.getClass());</div><div class="line">      Person p1=(Person)ac.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test2 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test3</span><span class="params">()</span>&#123;</div><div class="line">      Resource resource=<span class="keyword">new</span> ClassPathResource(<span class="string">"ssh/spring/applicationContext.xml"</span>);</div><div class="line">      BeanFactory beanFactory=<span class="keyword">new</span> XmlBeanFactory(resource);</div><div class="line">      Person p1=(Person)beanFactory.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test3 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test4</span><span class="params">()</span> <span class="keyword">throws</span> IOException&#123;</div><div class="line">      Resource resource=<span class="keyword">new</span> ClassPathResource(<span class="string">"applicationContext.xml"</span>,<span class="keyword">this</span>.getClass());</div><div class="line">      BeanFactory beanFactory=<span class="keyword">new</span> XmlBeanFactory(resource);</div><div class="line">      Person p1=(Person)beanFactory.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test4 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test5</span><span class="params">()</span>&#123;</div><div class="line">      Resource resource=<span class="keyword">new</span> FileSystemResource(<span class="string">"E:/Java/study/WebRoot/WEB-INF/classes/ssh/spring/applicationContext.xml"</span>);</div><div class="line">      BeanFactory beanFactory=<span class="keyword">new</span> XmlBeanFactory(resource);</div><div class="line">      Person p1=(Person)beanFactory.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test5 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/knowledge/categories/IT/">IT</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/knowledge/tags/spring/" title="spring">spring</a>
+    
 
-<p class="text-center">
-  <img style="width: 258px; height: 258px; border: 1px solid #eee; padding: 0; border-radius: 3px;" src="/knowledge/img/weixin.png">
-</p>
+        </span>
+    </p>
+</article>
+<div class="article-share clearfix text-center">
+    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
 
-<p class="text-center">
-  扫码加微信
-</p>
+<!-- 上一篇/下一篇 -->
 
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br >
+        <a href="javascript: void(0);">没有上一篇了</a>
+    </span>
+    
 
+    
+    <span class="next fr">
+        下一篇<br >
+        <a href="/knowledge/2017/08/09/魔鬼在细节中/">
+            
+                魔鬼在细节中
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
 
 <section class="post-comments">
   <div id="disqus_thread"></div>
   <script type="text/javascript">
       var disqus_shortname = 'JokingLove'; 
       
-      var disqus_identifier = '/comment/index.html';
-      var disqus_title = '留言';
-      var disqus_url = 'http://jokinglove.com/knowledge/comment/index.html';
+      var disqus_identifier = '/2017/08/13/spring-容器初始化的几种方式/';
+      var disqus_title = 'spring容器初始化的几种方式';
+      var disqus_url = 'http://jokinglove.com/knowledge/2017/08/13/spring-容器初始化的几种方式/';
       
 
       /**
@@ -171,9 +209,13 @@
 </section>
 
 
-        
-    </div>
-</article>
+
+
+
+
+
+<!--  网易云更贴已经暂停服务  -->
+
             </div>
 
         </section>

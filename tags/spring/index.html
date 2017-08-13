@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>关于 | JOKING</title>
+    <title>`spring`标签下的文章 | JOKING</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="JokingLove, 前端, Web, java, 博客，" >
     <meta name="description" content="JOKING 个人前端小站" >
@@ -57,19 +57,19 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/knowledge/about/index.html" class="item ">
+            <li rel="/knowledge/tags/spring/index.html" class="item ">
                 <a href="/knowledge/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/knowledge/about/index.html" class="item ">
+            <li rel="/knowledge/tags/spring/index.html" class="item ">
                 <a href="/knowledge/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
             </li>
             
-            <li rel="/knowledge/about/index.html" class="item current">
+            <li rel="/knowledge/tags/spring/index.html" class="item ">
                 <a href="/knowledge/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/knowledge/about/index.html" class="item ">
+            <li rel="/knowledge/tags/spring/index.html" class="item ">
                 <a href="/knowledge/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -119,75 +119,85 @@
     <div class="container body clearfix">
         <section class="content">
             <div class="content-main widget">
-                <!-- 独立页面 -->
-<article class="post article">
-    <header class="text-center">
-        <h4 class="post-title"><a href="javascript: void(0);">关于</a></h4>
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `spring`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章 -->
+<article class="post">
+    <header>
+        
+        <a class="cat-link" href="/knowledge/categories/IT/">IT</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="http://jokinglove.com/knowledge/2017/08/13/spring-容器初始化的几种方式/">
+    		spring容器初始化的几种方式
+    	</a>
+    </h3>
+
     </header>
+    <p class="post-meta">
+        JOKING 发表于
+        <time datetime="2017-08-13T13:10:25.428Z">2017-08-13</time>
+    </p>
+
     <div class="post-content">
-        
-            <!-- 自定义关于页 -->
-
-<div id='tree' style="width: 800px;height: 500px; margin: 0 auto;"></div>
-<script type="text/javascript">
-    var Tree = (function(){
-        var con, conWidth, conHeight;
-        var canvas = document.createElement("canvas"),ctx = canvas.getContext("2d"),W = window.innerWidth,H = window.innerHeight;
-        var maxAngle = Math.PI/2,maxBranch = 3;
-        canvas.height = H;canvas.width = W;
-        // document.body.appendChild(canvas);
-        var init = function(conId){
-            con = document.getElementById(conId);
-            conWidth = parseInt(con.style.width.replace(/%|px/, '')), 
-            conHeight = parseInt(con.style.height.replace(/%|px/, ''));
-            // 设置宽高
-            canvas.width = conWidth, canvas.height = conHeight;
-            ctx.width = conWidth, ctx.height = conHeight;
-            con.appendChild(canvas);
-            var x = conWidth || W /2,y = conHeight || H /2 + 100;
-            draw(conWidth/2, conHeight, 60, -Math.PI/2, 12, 12);
-        }
-        var draw = function(startX,startY,length,angle,depth,branchWidth){
-            var color,endX,endY,subBranches,newAngle,newLength;
-            ctx.beginPath();
-            ctx.moveTo(startX,startY);
-            endX = startX + length * Math.cos(angle);
-            endY = startY + length * Math.sin(angle);
-
-            ctx.lineCap = 'round';
-            ctx.lineWidth = branchWidth;
-            ctx.lineTo(endX,endY);
-            if(depth--<=2){
-                color = 'rgb(0,' + (rand(128,192)>>0) + ',0)';
-            }else{
-                color = 'rgb(' + (rand(64,128)>>0) + ',50,25)';
-            }
-            ctx.strokeStyle = color;
-            ctx.stroke();
-            if(!depth) return;
-            subBranches = rand(1,maxBranch);
-            branchWidth *= 0.7;
-            for(var i=0;i<subBranches;i++){
-                newAngle = angle + rand(-Math.PI/4,Math.PI/4);
-                newLength = length * rand(0.7,1);
-                draw(endX,endY,newLength,newAngle,depth,branchWidth)
-            }
-
-        }
-        var rand = function(min,max){
-            return Math.random() * (max-min) + min;
-        }
-        return {init : init}
-    })();
-    window.onload = function(){
-        Tree.init('tree');
-    }
-</script>
-
-
-        
+        <div class="post-excerpt">
+            
+                <p>spring 通常有五种初始化的方式，代码如下：<br>
+            
+            <p class="more">
+                <a href="http://jokinglove.com/knowledge/2017/08/13/spring-容器初始化的几种方式/">继续阅读</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://jokinglove.com/knowledge/2017/08/13/spring-容器初始化的几种方式/" title="spring容器初始化的几种方式">
+                
+                    <img class="thumbnail" src="/knowledge/img/default.png" data-echo="http://ory1lv7jy.bkt.clouddn.com/images/3.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
     </div>
+    <p class="post-meta">
+        
+        评论：<a href="http://jokinglove.com/knowledge/2017/08/13/spring-容器初始化的几种方式/#disqus_thread" class="post-comments">
+            <span 
+              lang="join-count" 
+              class="join-count disqus-comment-count" 
+              data-disqus-url="http://jokinglove.com/knowledge/2017/08/13/spring-容器初始化的几种方式/" 
+              data-sourceId="spring-容器初始化的几种方式"
+            >0</span>
+        </a>
+        
+        <!-- 标签 -->
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/knowledge/tags/spring/" title="spring">spring</a>
+    
+
+        </span>
+    </p>
 </article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span>
+    </nav>
+    
+
+
             </div>
 
         </section>

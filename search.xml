@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title><![CDATA[spring容器初始化的几种方式]]></title>
+      <url>/knowledge/2017/08/13/spring-%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<p>spring 通常有五种初始化的方式，代码如下：<br><a id="more"></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> ssh.spring;</div><div class="line"> </div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"> </div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.BeanFactory;</div><div class="line"><span class="keyword">import</span> org.springframework.beans.factory.xml.XmlBeanFactory;</div><div class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</div><div class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</div><div class="line"><span class="keyword">import</span> org.springframework.core.io.ClassPathResource;</div><div class="line"><span class="keyword">import</span> org.springframework.core.io.FileSystemResource;</div><div class="line"><span class="keyword">import</span> org.springframework.core.io.Resource;</div><div class="line"> </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span>&#123;</div><div class="line">      ApplicationContext ac=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"ssh/spring/applicationContext.xml"</span>);</div><div class="line">      Person p1=(Person)ac.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test1 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span>&#123;</div><div class="line">      ApplicationContext ac=<span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>,<span class="keyword">this</span>.getClass());</div><div class="line">      Person p1=(Person)ac.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test2 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test3</span><span class="params">()</span>&#123;</div><div class="line">      Resource resource=<span class="keyword">new</span> ClassPathResource(<span class="string">"ssh/spring/applicationContext.xml"</span>);</div><div class="line">      BeanFactory beanFactory=<span class="keyword">new</span> XmlBeanFactory(resource);</div><div class="line">      Person p1=(Person)beanFactory.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test3 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test4</span><span class="params">()</span> <span class="keyword">throws</span> IOException&#123;</div><div class="line">      Resource resource=<span class="keyword">new</span> ClassPathResource(<span class="string">"applicationContext.xml"</span>,<span class="keyword">this</span>.getClass());</div><div class="line">      BeanFactory beanFactory=<span class="keyword">new</span> XmlBeanFactory(resource);</div><div class="line">      Person p1=(Person)beanFactory.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test4 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">   <span class="meta">@org</span>.junit.<span class="function">Test</span></div><div class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test5</span><span class="params">()</span>&#123;</div><div class="line">      Resource resource=<span class="keyword">new</span> FileSystemResource(<span class="string">"E:/Java/study/WebRoot/WEB-INF/classes/ssh/spring/applicationContext.xml"</span>);</div><div class="line">      BeanFactory beanFactory=<span class="keyword">new</span> XmlBeanFactory(resource);</div><div class="line">      Person p1=(Person)beanFactory.getBean(<span class="string">"person"</span>);</div><div class="line">      System.out.println(<span class="string">"test5 "</span>+p1);</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> IT </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> spring </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[魔鬼在细节中]]></title>
       <url>/knowledge/2017/08/09/%E9%AD%94%E9%AC%BC%E5%9C%A8%E7%BB%86%E8%8A%82%E4%B8%AD/</url>
       <content type="html"><![CDATA[<p>作为一个it小司机，每次在写完代码，自己测了一遍都没发现什么问题，提交给测试的时候反馈回来一大堆的bug，检查发现很多其实都是一些很小的需要注意的细节，但却足以让你的程序瘫痪，平时注意这些小细节，可能会省去好多事。那么在编码中我们应该时候需要注意的规范有哪些呢，这也是在成为一个it老司机的路上必须要经过的一道坎，在这借鉴一下阿里大牛写的一遍魔鬼在细节中。<a id="more"></a></p>
@@ -257,26 +278,14 @@
   
     
     <entry>
-      <title><![CDATA[留言]]></title>
-      <url>/knowledge/comment/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[友情链接]]></title>
-      <url>/knowledge/friends/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>/knowledge/about/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[实验室]]></title>
-      <url>/knowledge/lab/index.html</url>
+      <title><![CDATA[留言]]></title>
+      <url>/knowledge/comment/index.html</url>
       <content type="html"></content>
     </entry>
     
@@ -292,9 +301,21 @@
     </entry>
     
     <entry>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title></title>
       <url>/knowledge/photos/output.json</url>
       <content type="html"><![CDATA[["1_b.jpg","1_s.jpg","2_b.jpg","2_s.jpg","3_b.jpg","3_s.jpg","4_b.jpg","4_s.jpg","5_b.jpg","5_s.jpg"]]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[实验室]]></title>
+      <url>/knowledge/lab/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
