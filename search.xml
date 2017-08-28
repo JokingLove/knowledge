@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[七夕瞎写]]></title>
+      <url>/knowledge/2017/08/28/20170707/</url>
+      <content type="html"><![CDATA[<p>听说今天是七夕，情人节，首先祝天下有情人终成眷属。<br></p>
+<p><font color="red" size="16px">七夕快乐</font><br><a id="more"></a></p>
+<ul>
+<li>关于这个七夕节<blockquote>
+<p>以前，每次过七夕也没怎么有什么问题，可今年的七夕，总感觉乖乖的。以往的七夕都是看着人家过，今年总感觉自己也在过，虽然这个七夕不重要，但是，七夕也得有个七夕的计划，对于我这个资深单身狗的计划。</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 瞎写 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 随记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[spring容器初始化的几种方式]]></title>
       <url>/knowledge/2017/08/13/spring-%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
       <content type="html"><![CDATA[<p>spring 通常有五种初始化的方式，代码如下：<br><a id="more"></a></p>
@@ -18,27 +46,6 @@
         <tags>
             
             <tag> spring </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[魔鬼在细节中]]></title>
-      <url>/knowledge/2017/08/09/20170707/</url>
-      <content type="html"><![CDATA[<p>听说今天是七夕，情人节，首先祝天下有情人终成眷属。<br></p>
-<font color="red" size="20px">七夕快乐</font>]]></content>
-      
-        <categories>
-            
-            <category> 瞎写 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 心情 </tag>
             
         </tags>
         
@@ -299,12 +306,6 @@
   
     
     <entry>
-      <title><![CDATA[友情链接]]></title>
-      <url>/knowledge/friends/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>/knowledge/about/index.html</url>
       <content type="html"></content>
@@ -317,6 +318,18 @@
     </entry>
     
     <entry>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[实验室]]></title>
+      <url>/knowledge/lab/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title></title>
       <url>/knowledge/photos/index.html</url>
       <content type="html"><![CDATA[<p><link type="text/css" href="/knowledge/css/jquery.fancybox.css" rel="stylesheet"></p>
@@ -325,12 +338,6 @@
 <script src="/knowledge/js/jquery.lazyload.min.js"></script>
 <script src="/knowledge/js/jquery.fancybox.js"></script>
 <script src="/knowledge/js/photo.js"></script>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[实验室]]></title>
-      <url>/knowledge/lab/index.html</url>
-      <content type="html"></content>
     </entry>
     
     <entry>
