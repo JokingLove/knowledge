@@ -25,6 +25,27 @@
     
     <entry>
       <title><![CDATA[魔鬼在细节中]]></title>
+      <url>/knowledge/2017/08/09/20170707/</url>
+      <content type="html"><![CDATA[<p>听说今天是七夕，情人节，首先祝天下有情人终成眷属。<br></p>
+<font color="red" size="20px">七夕快乐</font>]]></content>
+      
+        <categories>
+            
+            <category> 瞎写 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 心情 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[魔鬼在细节中]]></title>
       <url>/knowledge/2017/08/09/%E9%AD%94%E9%AC%BC%E5%9C%A8%E7%BB%86%E8%8A%82%E4%B8%AD/</url>
       <content type="html"><![CDATA[<p>作为一个it小司机，每次在写完代码，自己测了一遍都没发现什么问题，提交给测试的时候反馈回来一大堆的bug，检查发现很多其实都是一些很小的需要注意的细节，但却足以让你的程序瘫痪，平时注意这些小细节，可能会省去好多事。那么在编码中我们应该时候需要注意的规范有哪些呢，这也是在成为一个it老司机的路上必须要经过的一道坎，在这借鉴一下阿里大牛写的一遍魔鬼在细节中。<a id="more"></a></p>
 <ol>
@@ -278,6 +299,12 @@
   
     
     <entry>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于]]></title>
       <url>/knowledge/about/index.html</url>
       <content type="html"></content>
@@ -301,8 +328,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[友情链接]]></title>
-      <url>/knowledge/friends/index.html</url>
+      <title><![CDATA[实验室]]></title>
+      <url>/knowledge/lab/index.html</url>
       <content type="html"></content>
     </entry>
     
@@ -310,12 +337,6 @@
       <title></title>
       <url>/knowledge/photos/output.json</url>
       <content type="html"><![CDATA[["1_b.jpg","1_s.jpg","2_b.jpg","2_s.jpg","3_b.jpg","3_s.jpg","4_b.jpg","4_s.jpg","5_b.jpg","5_s.jpg"]]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[实验室]]></title>
-      <url>/knowledge/lab/index.html</url>
-      <content type="html"></content>
     </entry>
     
   
