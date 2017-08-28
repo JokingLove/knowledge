@@ -12,6 +12,10 @@
 <p>以前，每次过七夕也没怎么有什么问题，可今年的七夕，总感觉乖乖的。以往的七夕都是看着人家过，今年总感觉自己也在过，虽然这个七夕不重要，但是，七夕也得有个七夕的计划，对于我这个资深单身狗的计划。</p>
 </blockquote>
 </li>
+<li>关于工作<blockquote>
+<p>像我这种单身狗，感觉除了工作，也没什么可以写的了。最近工作有点忙，也没什么时间来看技术文档，没有时间研究一点新技术了。都说一入it深似海，从此妹子是路人，</p>
+</blockquote>
+</li>
 </ul>
 ]]></content>
       
@@ -324,12 +328,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[实验室]]></title>
-      <url>/knowledge/lab/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title></title>
       <url>/knowledge/photos/index.html</url>
       <content type="html"><![CDATA[<p><link type="text/css" href="/knowledge/css/jquery.fancybox.css" rel="stylesheet"></p>
@@ -338,6 +336,12 @@
 <script src="/knowledge/js/jquery.lazyload.min.js"></script>
 <script src="/knowledge/js/jquery.fancybox.js"></script>
 <script src="/knowledge/js/photo.js"></script>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[实验室]]></title>
+      <url>/knowledge/lab/index.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
