@@ -13,7 +13,7 @@
 </blockquote>
 </li>
 <li>关于工作<blockquote>
-<p>像我这种单身狗，感觉除了工作，也没什么可以写的了。最近工作有点忙，也没什么时间来看技术文档，没有时间研究一点新技术了。都说一入it深似海，从此妹子是路人，</p>
+<p>像我这种单身狗，感觉除了工作，也没什么可以写的了。最近工作有点忙，也没什么时间来看技术文档，没有时间研究一点新技术了。都说一入it深似海，从此妹子是路人，对于爱情这个问题，我一向所持的态度是，有可能的可以试试，没可能的，敬而远之。这就像一朵开的很艳丽的鲜花，既然你不能得到它，就让他鲜艳的开着，何必去摘呢。爱情这件事，更需要的是勇气，可能我还是比较缺乏勇气的。很乱。<br>对于一个家庭来说，稳定的收入，和睦的成员关系。最重要的是两个人的相濡以沫，粗茶淡饭的天长地久，这些能不能经受得住时间的考验。对于一个家庭来说，我觉得很重要。然而，对于一个男人的事业来说，直接影响这这个家庭的一切，这很疼，不说了，我还是加油敲代码去了，不敲代码，哪来的钱，没有钱，哪来的媳妇，没有媳妇，哪来的家庭，光在这儿吹逼是吹不出来对的。敲代码，敲代码。你也别看了，赶紧敲代码去。。。。。</p>
 </blockquote>
 </li>
 </ul>
@@ -322,12 +322,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[友情链接]]></title>
-      <url>/knowledge/friends/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title></title>
       <url>/knowledge/photos/index.html</url>
       <content type="html"><![CDATA[<p><link type="text/css" href="/knowledge/css/jquery.fancybox.css" rel="stylesheet"></p>
@@ -341,6 +335,12 @@
     <entry>
       <title><![CDATA[实验室]]></title>
       <url>/knowledge/lab/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
       <content type="html"></content>
     </entry>
     
