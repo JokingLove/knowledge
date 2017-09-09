@@ -3,6 +3,46 @@
   
     
     <entry>
+      <title><![CDATA[spring helloworld]]></title>
+      <url>/knowledge/2017/09/09/spring-boot-helloworld/</url>
+      <content type="html"><![CDATA[<p>忙了这么久，感觉好久都没有学习一点新技术了，之前看过spring-boot的一些文档，现在打算实践一遍。很强势的，我们从hello world 开始。从不用ide开始。<a id="more"></a></p>
+<ul>
+<li><p>1、新建一个maven项目。<br>可以用以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir -p spring-boot-hello/src/main/java</div><div class="line">touch pom.xml</div></pre></td></tr></table></figure>
+<p>其中pom.xml文件中输入以下内容</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-hello<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!-- 这个代表着此项目是从  parent中继承来的 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">parent</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.0.M3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!-- 添加web相关的包支持 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>2、然后创建一个名为HelloController.java的文件</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p com/hello</div><div class="line"><span class="built_in">cd</span> com/hello/</div><div class="line">touch HelloController.java</div></pre></td></tr></table></figure>
+<p> 其中内容如下:</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.hello;</div><div class="line"></div><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/hello"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/say"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"Hello World!"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>3、返回到java目录，新建名为Application.java的文件，内容如下:</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@EnableAutoConfiguration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</div><div class="line">        SpringApplication.run(Application.class, args);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>4、利用mvn package 打包，进入到target目录下,生成一个以  spring-boot-hello 开头的jar文件。</p>
+</li>
+<li>5、用 java -jar 命令运行这个jar文件。可以在命令行看到spring-boot的启动信息。</li>
+<li>6、在浏览器中用 localhost:8080/hello/say 访问，就可以看到  Hello World! 了。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> IT </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> spring-boot </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[七夕瞎写]]></title>
       <url>/knowledge/2017/08/28/20170707/</url>
       <content type="html"><![CDATA[<p>听说今天是七夕，情人节，首先祝天下有情人终成眷属。<br></p>
@@ -310,26 +350,15 @@
   
     
     <entry>
-      <title><![CDATA[关于]]></title>
-      <url>/knowledge/about/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[留言]]></title>
       <url>/knowledge/comment/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title></title>
-      <url>/knowledge/photos/index.html</url>
-      <content type="html"><![CDATA[<p><link type="text/css" href="/knowledge/css/jquery.fancybox.css" rel="stylesheet"></p>
-<p><div class="instagram"><section class="archives album"><ul class="img-box-ul"></ul></section></div></p>
-<script src="/knowledge/js/jquery-1.8.2.min.js"></script>
-<script src="/knowledge/js/jquery.lazyload.min.js"></script>
-<script src="/knowledge/js/jquery.fancybox.js"></script>
-<script src="/knowledge/js/photo.js"></script>]]></content>
+      <title><![CDATA[关于]]></title>
+      <url>/knowledge/about/index.html</url>
+      <content type="html"></content>
     </entry>
     
     <entry>
@@ -348,6 +377,17 @@
       <title></title>
       <url>/knowledge/photos/output.json</url>
       <content type="html"><![CDATA[["1_b.jpg","1_s.jpg","2_b.jpg","2_s.jpg","3_b.jpg","3_s.jpg","4_b.jpg","4_s.jpg","5_b.jpg","5_s.jpg"]]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>/knowledge/photos/index.html</url>
+      <content type="html"><![CDATA[<p><link type="text/css" href="/knowledge/css/jquery.fancybox.css" rel="stylesheet"></p>
+<p><div class="instagram"><section class="archives album"><ul class="img-box-ul"></ul></section></div></p>
+<script src="/knowledge/js/jquery-1.8.2.min.js"></script>
+<script src="/knowledge/js/jquery.lazyload.min.js"></script>
+<script src="/knowledge/js/jquery.fancybox.js"></script>
+<script src="/knowledge/js/photo.js"></script>]]></content>
     </entry>
     
   

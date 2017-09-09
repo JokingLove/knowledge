@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>hello | JOKING</title>
+    <title>spring helloworld | JOKING</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="JokingLove, 前端, Web, java, 博客，" >
     <meta name="description" content="JOKING 个人前端小站" >
@@ -57,19 +57,19 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/knowledge/2017/04/28/hello/index.html" class="item ">
+            <li rel="/knowledge/2017/09/09/spring-boot-helloworld/index.html" class="item ">
                 <a href="/knowledge/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/knowledge/2017/04/28/hello/index.html" class="item ">
+            <li rel="/knowledge/2017/09/09/spring-boot-helloworld/index.html" class="item ">
                 <a href="/knowledge/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
             </li>
             
-            <li rel="/knowledge/2017/04/28/hello/index.html" class="item ">
+            <li rel="/knowledge/2017/09/09/spring-boot-helloworld/index.html" class="item ">
                 <a href="/knowledge/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/knowledge/2017/04/28/hello/index.html" class="item ">
+            <li rel="/knowledge/2017/09/09/spring-boot-helloworld/index.html" class="item ">
                 <a href="/knowledge/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -123,25 +123,44 @@
 <!-- 文章 -->
 <article class="post article">
     <header class="text-center">
-        <h3 class="post-title"><span>hello</span></h3>
+        <h3 class="post-title"><span>spring helloworld</span></h3>
     </header>
     <p class="post-meta text-center">
         JOKING 发表于
-        <time datetime="2017-04-28T14:00:58.000Z">2017-04-28</time>
+        <time datetime="2017-09-09T14:00:58.000Z">2017-09-09</time>
     </p>
     <div class="post-content">
-        <h5 id="小计一笔"><a href="#小计一笔" class="headerlink" title="小计一笔"></a>小计一笔</h5><p>作为一个做技术的，对所学的技术总结，分享是很重要的，也希望以后多多总结学到的新的东西，分享出来，做一个记录。和更多的人一起去交流，学习。也许，这样才是学习的真正乐趣。<br><a id="more"></a></p>
+        <p>忙了这么久，感觉好久都没有学习一点新技术了，之前看过spring-boot的一些文档，现在打算实践一遍。很强势的，我们从hello world 开始。从不用ide开始。<a id="more"></a></p>
+<ul>
+<li><p>1、新建一个maven项目。<br>可以用以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir -p spring-boot-hello/src/main/java</div><div class="line">touch pom.xml</div></pre></td></tr></table></figure>
+<p>其中pom.xml文件中输入以下内容</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line">  <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-hello<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!-- 这个代表着此项目是从  parent中继承来的 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">parent</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.0.M3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="comment">&lt;!-- 添加web相关的包支持 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>2、然后创建一个名为HelloController.java的文件</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p com/hello</div><div class="line"><span class="built_in">cd</span> com/hello/</div><div class="line">touch HelloController.java</div></pre></td></tr></table></figure>
+<p> 其中内容如下:</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.hello;</div><div class="line"></div><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/hello"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/say"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"Hello World!"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>3、返回到java目录，新建名为Application.java的文件，内容如下:</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@EnableAutoConfiguration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</div><div class="line">        SpringApplication.run(Application.class, args);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>4、利用mvn package 打包，进入到target目录下,生成一个以  spring-boot-hello 开头的jar文件。</p>
+</li>
+<li>5、用 java -jar 命令运行这个jar文件。可以在命令行看到spring-boot的启动信息。</li>
+<li>6、在浏览器中用 localhost:8080/hello/say 访问，就可以看到  Hello World! 了。</li>
+</ul>
 
     </div>
     <p class="post-meta">
         <span class="post-cat">分类：
-            <a class="cat-link" href="/knowledge/categories/瞎写/">瞎写</a>
+            <a class="cat-link" href="/knowledge/categories/IT/">IT</a>
         </span>
         <span class="post-tags">
             标签：
             
     
-        <a href="/knowledge/tags/随记/" title="随记">随记</a>
+        <a href="/knowledge/tags/spring-boot/" title="spring-boot">spring-boot</a>
     
 
         </span>
@@ -158,20 +177,16 @@
     
     <span class="prev fl">
         上一篇<br >
-        <a href="/knowledge/2017/06/07/hello-world/">
-            
-                Hello World
-            
-        </a>
+        <a href="javascript: void(0);">没有上一篇了</a>
     </span>
     
 
     
     <span class="next fr">
         下一篇<br >
-        <a href="/knowledge/2016/04/28/java设计模式的原则/">
+        <a href="/knowledge/2017/08/28/20170707/">
             
-                设计模式的六大原则
+                七夕瞎写
             
         </a>
     </span>
@@ -185,9 +200,9 @@
   <script type="text/javascript">
       var disqus_shortname = 'JokingLove'; 
       
-      var disqus_identifier = '/2017/04/28/hello/';
-      var disqus_title = 'hello';
-      var disqus_url = 'http://jokinglove.com/knowledge/2017/04/28/hello/';
+      var disqus_identifier = '/2017/09/09/spring-boot-helloworld/';
+      var disqus_title = 'spring helloworld';
+      var disqus_url = 'http://jokinglove.com/knowledge/2017/09/09/spring-boot-helloworld/';
       
 
       /**
