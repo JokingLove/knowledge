@@ -203,7 +203,7 @@ var JELON = window.JELON || {};
     box: {
       tpl: [
         '<section class="box" id="JELON__commentBox">',
-          '<div class="com-avatar"><img id="JELON__loginAvatar" src="/img/unsigned_avatar.jpg" alt="avatar"></div>',
+          '<div class="com-avatar"><img id="JELON__loginAvatar" src="/images/comment.png" alt="avatar"></div>',
           '<div class="com-text">',
             '<div class="main">',
               '<textarea class="text-area-edited show" id="JELON__editBox" placeholder="欢迎评论！"></textarea>',
@@ -225,7 +225,7 @@ var JELON = window.JELON || {};
           userInfo = {};
         }
         // 默认头像路径 /img/jelon.jpg
-        $('JELON__loginAvatar').src = userInfo.avatar_url || '/img/unsigned_avatar.jpg';
+        $('JELON__loginAvatar').src = userInfo.avatar_url || '/images/comment.png';
       }
     },
     list: {
