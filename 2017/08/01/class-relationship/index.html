@@ -32,7 +32,6 @@
 </script>
 
 
-    
 <link rel="stylesheet" href="/knowledge/css/prism.css" type="text/css"></head>
 
 <body class="home">
@@ -86,7 +85,7 @@
                         <a href="https://github.com/JokingLove" target="_blank">Github</a>
                         |
                     
-                        <a href="http://tongji.baidu.com/web/welcome/login" target="_blank">百度统计</a>
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
                         
                     
                 </p>
@@ -161,10 +160,19 @@
         </span>
     </p>
 </article>
-<div class="article-share clearfix text-center">
-    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-</div>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
 
 <!-- 上一篇/下一篇 -->
 
@@ -194,45 +202,91 @@
 
 <!-- 文章评论 -->
 
-<section class="post-comments">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = 'JokingLove'; 
-      
-      var disqus_identifier = '/2017/08/01/class-relationship/';
-      var disqus_title = '类与类之间的关系';
-      var disqus_url = 'http://jokinglove.com/knowledge/2017/08/01/class-relationship/';
-      
-
-      /**
-      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-      /*
-      var disqus_config = function () {
-      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-      */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://jokinglove.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <div style="color:red" class="dsq-brlink">如果你看不到评论区，就说明你被墙了，鉴于国内的网络环境，你需要科学上网。。
-  你可以下载</br><a style="color:blue" href="https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer.exe">windows版</a>,</br><a  style="color:blue" href="https://raw.githubusercontent.com/getlantern/lantern-binaries/master/lantern-installer.apk">android版</a>,</br>来访问评论区。
-  <span class="logo-disqus">Disqus</span></div>
-</section>
-
-
-
-
 
 
 
 <!--  网易云更贴已经暂停服务  -->
+
+
+<!--  github issue 托管的评论  -->
+
+  <script src="/knowledge/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: 'class-relationship' || '2017/08/01/class-relationship/',
+    owner: 'JOKING',
+    repo: 'site_comments',
+    clientId: 'b08ed25e52c57993e69c',
+    clientSecret: '1cb9545488f0380904b87350e7c5a270ae03bab7'
+  });
+  </script>
+
+
 
             </div>
 
@@ -250,8 +304,8 @@
     </li>
     
     <li>
-        <a href="/knowledge/categories/其他/">其他</a>
-        <span class="badge">(1)</span>
+        <a href="/knowledge/categories/IT/">IT</a>
+        <span class="badge">(6)</span>
     </li>
     
     <li>
@@ -260,8 +314,8 @@
     </li>
     
     <li>
-        <a href="/knowledge/categories/IT/">IT</a>
-        <span class="badge">(6)</span>
+        <a href="/knowledge/categories/其他/">其他</a>
+        <span class="badge">(1)</span>
     </li>
     
 </ul>
@@ -275,17 +329,17 @@
   
     	<a class="tag-item" href="/knowledge/tags/随记/" title="(2)">随记</a>
 	  
-    	<a class="tag-item" href="/knowledge/tags/hexo/" title="(1)">hexo</a>
+    	<a class="tag-item" href="/knowledge/tags/面向对象/" title="(1)">面向对象</a>
 	  
     	<a class="tag-item" href="/knowledge/tags/git/" title="(1)">git</a>
 	  
-    	<a class="tag-item" href="/knowledge/tags/spring-boot/" title="(1)">spring-boot</a>
+    	<a class="tag-item" href="/knowledge/tags/hexo/" title="(1)">hexo</a>
+	  
+    	<a class="tag-item" href="/knowledge/tags/设计模式/" title="(1)">设计模式</a>
 	  
     	<a class="tag-item" href="/knowledge/tags/python/" title="(1)">python</a>
 	  
-    	<a class="tag-item" href="/knowledge/tags/面向对象/" title="(1)">面向对象</a>
-	  
-    	<a class="tag-item" href="/knowledge/tags/设计模式/" title="(1)">设计模式</a>
+    	<a class="tag-item" href="/knowledge/tags/spring-boot/" title="(1)">spring-boot</a>
 	  
     	<a class="tag-item" href="/knowledge/tags/spring/" title="(1)">spring</a>
 	  
@@ -342,15 +396,11 @@
 </script> -->
 
 
-
-
     <!--博客js脚本 -->
     <!-- 这里放网站js脚本 -->
 <script src="/knowledge/js/main.js"></script>
 
 <!-- disqus 评论相关js -->
-
-<script id="dsq-count-scr" src="//JokingLove.disqus.com/count.js" async></script>
 
     <!-- 百度统计 -->
     
