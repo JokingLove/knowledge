@@ -128,6 +128,8 @@
             <!-- 自定义关于页 -->
 
 <div id='tree' style="width: 800px;height: 500px; margin: 0 auto;"></div>
+
+<!-- canvas 树 -->
 <script type="text/javascript">
     var Tree = (function(){
         var con, conWidth, conHeight;
@@ -178,9 +180,103 @@
         }
         return {init : init}
     })();
-    window.onload = function(){
+/*    window.onload = function(){
         Tree.init('tree');
-    }
+    }*/
+</script>
+<!-- 图表 -->
+<script type="text/javascript" src="/js/echarts.min.js"></script>
+<script type="text/javascript">
+
+ // 基于准备好的dom，初始化echarts实例
+ var myChart = echarts.init(document.getElementById('tree'));  
+ // 使用刚指定的配置项和数据显示图表。
+ myChart.setOption(option);
+ option = {
+    title: {
+        text: '自定义雷达图'
+    },
+    legend: {
+        data: ['图一','图二']
+    },
+    radar: [
+        {
+            indicator: [
+                { text: '指标一' },
+                { text: '指标二' },
+                { text: '指标三' },
+                { text: '指标四' },
+                { text: '指标五' }
+            ],
+            center: ['50%', '50%'],
+            radius: 120,
+            startAngle: 90,
+            splitNumber: 4,
+            shape: 'circle',
+            name: {
+                formatter:'【{value}】',
+                textStyle: {
+                    color:'#72ACD1'
+                }
+            },
+            splitArea: {
+                areaStyle: {
+                    color: ['rgba(114, 172, 209, 0.2)',
+                    'rgba(114, 172, 209, 0.4)', 'rgba(114, 172, 209, 0.6)',
+                    'rgba(114, 172, 209, 0.8)', 'rgba(114, 172, 209, 1)'],
+                    shadowColor: 'rgba(0, 0, 0, 0.3)',
+                    shadowBlur: 10
+                }
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(255, 255, 255, 0.5)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(255, 255, 255, 0.5)'
+                }
+            }
+        }
+    ],
+    series: [
+        {
+            name: '雷达图',
+            type: 'radar',
+            itemStyle: {
+                emphasis: {
+                    // color: 各异,
+                    lineStyle: {
+                        width: 4
+                    }
+                }
+            },
+            data: [
+                {
+                    value: [100, 8, 0.40, -80, 2000],
+                    name: '图一',
+                    symbol: 'rect',
+                    symbolSize: 5,
+                    lineStyle: {
+                        normal: {
+                            type: 'dashed'
+                        }
+                    }
+                },
+                {
+                    value: [60, 5, 0.30, -100, 1500],
+                    name: '图二',
+                    areaStyle: {
+                        normal: {
+                            color: 'rgba(255, 255, 255, 0.5)'
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
 </script>
 
 
@@ -199,13 +295,13 @@
 <ul class="widget-bd">
     
     <li>
-        <a href="/knowledge/categories/其他/">其他</a>
-        <span class="badge">(1)</span>
+        <a href="/knowledge/categories/瞎写/">瞎写</a>
+        <span class="badge">(2)</span>
     </li>
     
     <li>
-        <a href="/knowledge/categories/瞎写/">瞎写</a>
-        <span class="badge">(2)</span>
+        <a href="/knowledge/categories/IT/">IT</a>
+        <span class="badge">(6)</span>
     </li>
     
     <li>
@@ -214,8 +310,8 @@
     </li>
     
     <li>
-        <a href="/knowledge/categories/IT/">IT</a>
-        <span class="badge">(6)</span>
+        <a href="/knowledge/categories/其他/">其他</a>
+        <span class="badge">(1)</span>
     </li>
     
 </ul>
@@ -227,23 +323,23 @@
         <!-- 文章标签 -->
 <div class="widget-bd tag-wrap">
   
-    	<a class="tag-item" href="/knowledge/tags/hexo/" title="(1)">hexo</a>
-	  
     	<a class="tag-item" href="/knowledge/tags/随记/" title="(2)">随记</a>
+	  
+    	<a class="tag-item" href="/knowledge/tags/面向对象/" title="(1)">面向对象</a>
 	  
     	<a class="tag-item" href="/knowledge/tags/git/" title="(1)">git</a>
 	  
-    	<a class="tag-item" href="/knowledge/tags/面向对象/" title="(1)">面向对象</a>
+    	<a class="tag-item" href="/knowledge/tags/hexo/" title="(1)">hexo</a>
 	  
     	<a class="tag-item" href="/knowledge/tags/设计模式/" title="(1)">设计模式</a>
 	  
     	<a class="tag-item" href="/knowledge/tags/python/" title="(1)">python</a>
 	  
-    	<a class="tag-item" href="/knowledge/tags/编码规范/" title="(1)">编码规范</a>
+    	<a class="tag-item" href="/knowledge/tags/spring-boot/" title="(1)">spring-boot</a>
 	  
     	<a class="tag-item" href="/knowledge/tags/spring/" title="(1)">spring</a>
 	  
-    	<a class="tag-item" href="/knowledge/tags/spring-boot/" title="(1)">spring-boot</a>
+    	<a class="tag-item" href="/knowledge/tags/编码规范/" title="(1)">编码规范</a>
 	  
 </div>
     </section>
