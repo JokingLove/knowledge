@@ -190,9 +190,8 @@
 
  // 基于准备好的dom，初始化echarts实例
  var myChart = echarts.init(document.getElementById('tree'));  
- // 使用刚指定的配置项和数据显示图表。
- myChart.setOption(option);
- option = {
+ 
+ var option = {
     title: {
         text: '自定义雷达图'
     },
@@ -277,6 +276,9 @@
         }
     ]
 }
+
+// 使用刚指定的配置项和数据显示图表。
+ myChart.setOption(option);
 </script>
 
 
