@@ -267,6 +267,7 @@ var JELON = window.JELON || {};
                     '<span class="post-time">' + formatDate('yyyy-MM-dd hh:mm', new Date(list[i].created_at)) + '</span>',
                     '<span class="like" onclick="JELON.Actions.like(' + list[i].id + ')">点赞</span>',
                     '<span class="like-num">' + list[i].reactions.heart + '</span>',
+                    '<span class="reply" onclick="JELON.Actions.reply(\'' + list[i].user.login + '\', \'' + (list[i].body_html || list[i].body).replace(/<[^>]+>|\s|[\r\n]/g, ' ') + '\')">回复</span>',
                   '</div>',
                   '<div class="user-comment-body">' + (list[i].body_html || list[i].body) + '</div>',
                 '</div>',
@@ -287,10 +288,10 @@ var JELON = window.JELON || {};
               pageList.push(pageItem);
             }
             if (page !== 1) {
-              pageList.unshift('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上一页</a>');
+              pageList.unshift('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上页</a>');
             }
             if (page !== allPages) {
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下页</a>');
             }
           } else if (allPages > perNavPageMaxSize) {
             if (page <= perNavPageMaxSize) {
@@ -303,16 +304,17 @@ var JELON = window.JELON || {};
                 pageList.push(pageItem);
               }
               if (page !== 1) {
-                pageList.unshift('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上一页</a>');
+                pageList.unshift('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上页</a>');
               }
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
+              pageList.push('<span class="more">...</span>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下页</a>');
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + allPages + ');" class="item">末页</a>');
             } else if (page > perNavPageMaxSize && page <= allPages - perNavPageMaxSize) {
               var mod = page % perNavPageMaxSize;
               var start = Math.floor(page / perNavPageMaxSize) * perNavPageMaxSize + 1;
               var end = Math.ceil(page / perNavPageMaxSize) * perNavPageMaxSize;
               pageList.push('<a href="javascript: JELON.Actions.pageJump(1);" class="item">首页</a>');
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上一页</a>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上页</a>');
               for (var i = start; i <= end; i++) {
                 if (i === page) {
                   pageItem = '<a href="javascript: void(0);" class="item current">' + page + '</a>';
@@ -321,13 +323,15 @@ var JELON = window.JELON || {};
                 }
                 pageList.push(pageItem);
               }
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
+
+              pageList.push('<span class="more">...</span>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下页</a>');
               pageList.push('<a href="javascript: JELON.Actions.pageJump(' + allPages + ');" class="item">末页</a>');
             } else if (page > perNavPageMaxSize && page > allPages - perNavPageMaxSize) {
               var start = allPages - perNavPageMaxSize + 1;
               var end = allPages;
               pageList.push('<a href="javascript: JELON.Actions.pageJump(1);" class="item">首页</a>');
-              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上一页</a>');
+              pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page - 1) + ');" class="item">上页</a>');
               for (var i = start; i <= end; i++) {
                 if (i === page) {
                   pageItem = '<a href="javascript: void(0);" class="item current">' + page + '</a>';
@@ -337,7 +341,7 @@ var JELON = window.JELON || {};
                 pageList.push(pageItem);
               }
               if (page !== allPages) {
-                pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下一页</a>');
+                pageList.push('<a href="javascript: JELON.Actions.pageJump(' + (page + 1) + ');" class="item">下页</a>');
               }
             }
           }
@@ -388,6 +392,7 @@ var JELON = window.JELON || {};
               '<span class="post-time">' + formatDate('yyyy-MM-dd hh:mm', new Date(data.created_at)) + '</span>',
               '<span class="like" onclick="JELON.Actions.like(' + data.reactions.heart + ')">点赞</span>',
               '<span class="like-num">' + data.reactions.heart + '</span>',
+              '<span class="reply" onclick="JELON.Actions.reply(\'' + data.user.login + '\', \'' + (data.body_html || data.body).replace(/<[^>]+>|\s|[\r\n]/g, ' ') + '\')">回复</span>',
             '</div>',
             '<div class="user-comment-body">' + (data.body_html || data.body) + '</div>',
           '</div>'
@@ -492,7 +497,10 @@ var JELON = window.JELON || {};
           client_secret: JL.options.clientSecret,
           code: code
         }, function (res) {
-          if (res.access_token) {
+          if (res.access_token || res.data) {
+            if (res.data) {
+              res.access_token = res.data.access_token;
+            }
             localStorage.setItem(constants.ACCESS_TOKEN_KEY, res.access_token);       // 保存 access_token 至 localStorage
             JL.Requests.getUserInfo({ access_token: res.access_token }, function (res) {
               if (res.login) {
@@ -671,6 +679,22 @@ var JELON = window.JELON || {};
         }
         JL.Renders.loading.remove();
       });
+    },
+    reply: function (people, content) {
+      var accessToken = localStorage.getItem(constants.ACCESS_TOKEN_KEY);
+      var userInfo = localStorage.getItem(constants.USER_INFO_KEY);
+      if (!accessToken || !userInfo) {
+        return;
+      }
+      JL.Actions.editPreviewSwitch('edit');
+      $('JELON__editBox').value = '';
+      $('JELON__editBox').focus();
+      $('JELON__editBox').value = [
+        '@' + people + '\n',
+        '> ' + content + '\n',
+        '\n'
+      ].join('');
+      $('JELON__previewBox').innerHTML = '';
     }
   };
   JL.Requests = {
@@ -795,8 +819,12 @@ var JELON = window.JELON || {};
     },
     getAccessToken: function (data, callback) {
       ajax({
-        url: 'https://gh-oauth.imsun.net/',
+        // url: 'https://gh-oauth.imsun.net/',
+        url: 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token',
         method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
         data: data,
         success: function (res) {
           if (typeof res === 'string') {

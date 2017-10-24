@@ -1648,6 +1648,7 @@ pre .javascript .function {
 }
 .comment .list-wrap .list .user-comment .user-comment-header {
   color: #aaa;
+  position: relative;
 }
 .comment .list-wrap .list .user-comment .user-comment-header span {
   margin-right: 5px;
@@ -1669,6 +1670,17 @@ pre .javascript .function {
 .comment .list-wrap .list .user-comment .user-comment-header .like-num {
   font-size: 10px;
 }
+.comment .list-wrap .list .user-comment .user-comment-header .reply {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 3px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.comment .list-wrap .list .user-comment:hover .user-comment-header .reply {
+  display: block;
+}
 .comment .page-nav {
   margin-top: 10px;
   text-align: right;
@@ -1689,6 +1701,13 @@ pre .javascript .function {
   color: #fff;
   background-color: #ff5e52;
   cursor: not-allowed;
+}
+.comment .page-nav .more {
+  height: 10px;
+  line-height: 10px;
+  padding: 8px 5px;
+  font-size: 10px;
+  text-align: center;
 }
 /*
  * 响应式媒体查询
@@ -1811,5 +1830,11 @@ pre .javascript .function {
     display: block;
     padding: 2px 8px;
     background-color: #eee;
+  }
+  .comment .list-wrap .list .user-comment .user-comment-header .reply {
+    display: block;
+  }
+  .comment .page-nav .more {
+    display: none;
   }
 }
