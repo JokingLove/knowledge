@@ -386,6 +386,12 @@
     </entry>
     
     <entry>
+      <title><![CDATA[实验室]]></title>
+      <url>/knowledge/lab/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[友情链接]]></title>
       <url>/knowledge/friends/index.html</url>
       <content type="html"></content>
@@ -400,12 +406,6 @@
 <script src="/knowledge/js/jquery.lazyload.min.js"></script>
 <script src="/knowledge/js/jquery.fancybox.js"></script>
 <script src="/knowledge/js/photo.js"></script>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[实验室]]></title>
-      <url>/knowledge/lab/index.html</url>
-      <content type="html"></content>
     </entry>
     
     <entry>
