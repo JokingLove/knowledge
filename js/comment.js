@@ -443,7 +443,7 @@ var JELON = window.JELON || {};
       }
     },
     tips: {
-      tpl: '<section class="tips clearfix" id="JELON__comment_tips">注：评论支持 markdown 语法！</section>',
+      tpl: '<section class="tips clearfix" id="JELON__comment_tips" style="color:#4183d7;">注：评论支持 markdown 语法！</section>',
       update: function () {
         var userInfo = localStorage.getItem(constants.USER_INFO_KEY);
         var handler = '';
