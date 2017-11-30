@@ -3,6 +3,36 @@
   
     
     <entry>
+      <title><![CDATA[魔鬼在细节中]]></title>
+      <url>/knowledge/2017/11/30/git-pages-themes/</url>
+      <content type="html"><![CDATA[<p>今天上github，突然发现了一个令人愉快的事，写个博客庆祝一波，那就是git pages 功能支持任何 public的git themes 了。赶紧把自己的一个工具给换了个主题，瞬间感觉高大上了，:joy <a href="http://jokinglove.com/tools/">小伙伴们可以参考一下</a> <a id="more"></a></p>
+<ul>
+<li>更换theme很方便，下面是官方消息的截图：<br><img src="http://joking.oss-cn-beijing.aliyuncs.com/blog/post_images/git-pages-themes.png" alt=""></li>
+<li>更换themes灰常简单，在自己要作为gitpages  的项目更目录新建一个_config.yml的文件，在里面加上这一句就ok了，然后git在构建的时候，会自动去相应的仓库下面拿到主题，应用的你的git pages 上面：<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">remote_theme:</span> <span class="string">owner/name</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其中  owner是主体所有者的名称，name 就是对应的主题了。就像这样：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">remote_theme:</span> <span class="string">pages-themes/leap-day</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>小伙伴们可以赶紧给自己的git pages换个高大上的主题玩玩了，有好的主题，也分享一波，我也换一个，一直是一个选择困难症患者，不知道什么样的主题比较适合我。但是不可否认的是，git，github很屌，屌屌的。💯 </li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> IT </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[节日感想]]></title>
       <url>/knowledge/2017/10/24/20171024/</url>
       <content type="html"><![CDATA[<p>好久没有写过博客了，今天是个特殊的日子。<font color="red" size="4px">1024</font>，写一篇博客扯扯蛋。不知道1024的程序员一定是个假程序员。<br>本来应该在这么个特殊的日子里面写一篇技术文章应该感觉会好一些，但是今天的心情貌似只适合扯淡，所以就不写技术相关的了，专门扯淡。<br><a id="more"></a><br> &emsp;最近正在看一本叫做<a href="https://www.gitbook.com/book/xiaolai/reborn/details" target="_blank" rel="external">《新生》</a>的书，有一些感触，那就扯扯从这本书中看到的一些感悟吧。这本书是李笑来老师写的，作为一个全面发展的人（至少我认为是这样的一个人），书中将人比作电脑，将我们所说的三观比作操作系统。每个人都有一个操作系统，而有些人会定期的升级操作系统，让自己的操作系统更加的灵活好用，而有些人的操作系统已经好久没有升级过了，还处于dos时代，有些人甚至没有操作系统。细细想来还真有点那么个意思。</p>
@@ -380,14 +410,14 @@
     </entry>
     
     <entry>
-      <title><![CDATA[关于]]></title>
-      <url>/knowledge/about/index.html</url>
+      <title><![CDATA[友情链接]]></title>
+      <url>/knowledge/friends/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[友情链接]]></title>
-      <url>/knowledge/friends/index.html</url>
+      <title><![CDATA[关于]]></title>
+      <url>/knowledge/about/index.html</url>
       <content type="html"></content>
     </entry>
     

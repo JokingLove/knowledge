@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>git 笔记 fork | JOKING</title>
+    <title>魔鬼在细节中 | JOKING</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="JokingLove, 前端, Web, java, 博客，" >
     <meta name="description" content="JOKING 个人前端小站" >
@@ -56,19 +56,19 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/knowledge/2017/06/17/git-note1/index.html" class="item ">
+            <li rel="/knowledge/2017/11/30/git-pages-themes/index.html" class="item ">
                 <a href="/knowledge/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/knowledge/2017/06/17/git-note1/index.html" class="item ">
+            <li rel="/knowledge/2017/11/30/git-pages-themes/index.html" class="item ">
                 <a href="/knowledge/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
             </li>
             
-            <li rel="/knowledge/2017/06/17/git-note1/index.html" class="item ">
+            <li rel="/knowledge/2017/11/30/git-pages-themes/index.html" class="item ">
                 <a href="/knowledge/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/knowledge/2017/06/17/git-note1/index.html" class="item ">
+            <li rel="/knowledge/2017/11/30/git-pages-themes/index.html" class="item ">
                 <a href="/knowledge/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -125,54 +125,28 @@
 <!-- 文章 -->
 <article class="post article">
     <header class="text-center">
-        <h3 class="post-title"><span>git 笔记 fork</span></h3>
+        <h3 class="post-title"><span>魔鬼在细节中</span></h3>
     </header>
     <p class="post-meta text-center">
         JOKING 发表于
-        <time datetime="2017-06-17T14:00:58.000Z">2017-06-17</time>
+        <time datetime="2017-11-30T13:52:06.798Z">2017-11-30</time>
     </p>
     <div class="post-content">
-        <p>今天看到一个博客中对git几个命令的总结，感觉讲的通俗易懂，借过来记一笔<br><a id="more"></a></p>
+        <p>今天上github，突然发现了一个令人愉快的事，写个博客庆祝一波，那就是git pages 功能支持任何 public的git themes 了。赶紧把自己的一个工具给换了个主题，瞬间感觉高大上了，:joy <a href="http://jokinglove.com/tools/">小伙伴们可以参考一下</a> <a id="more"></a></p>
 <ul>
-<li>需求：B要加入A的项目，不论是作为B的初始项目进行二次开发还是成为A项目的一员加入一起开发，步骤如下：</li>
-<li>1.B首先要fork一个。<br>B首先到A的github上，也就是此项目的位置:<a href="https://github.com/A/durit，然后单击fork，然后你（B）的github上就出现了一个fork，位置是：https://github.com/B/durit" target="_blank" rel="external">https://github.com/A/durit，然后单击fork，然后你（B）的github上就出现了一个fork，位置是：https://github.com/B/durit</a></li>
-<li>2.B把自己的fork克隆到本地。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/B/durit</div></pre></td></tr></table></figure>
+<li>更换theme很方便，下面是官方消息的截图：<br><img src="http://joking.oss-cn-beijing.aliyuncs.com/blog/post_images/git-pages-themes.png" alt=""></li>
+<li>更换themes灰常简单，在自己要作为gitpages  的项目更目录新建一个_config.yml的文件，在里面加上这一句就ok了，然后git在构建的时候，会自动去相应的仓库下面拿到主题，应用的你的git pages 上面：<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">remote_theme:</span> <span class="string">owner/name</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>(当你clone到本地，会有一个默认的远程名叫”origin”，它指向了fork on github，也就是B上的fork，而不是指向)</p>
+<p>其中  owner是主体所有者的名称，name 就是对应的主题了。就像这样：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">remote_theme:</span> <span class="string">pages-themes/leap-day</span></div></pre></td></tr></table></figure></p>
 <ul>
-<li>3.现在你是主人，为了保持与A的durit的联系，你需要给A的durit起个名，供你来驱使。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> durit</div><div class="line">$ git remote add upstream https://github.com/A/durit</div></pre></td></tr></table></figure>
-</li>
+<li>小伙伴们可以赶紧给自己的git pages换个高大上的主题玩玩了，有好的主题，也分享一波，我也换一个，一直是一个选择困难症患者，不知道什么样的主题比较适合我。但是不可否认的是，git，github很屌，屌屌的。💯 </li>
 </ul>
-<p>(现在改名为upstream，这名随意，现在你（B）管A的durit叫upstream，以后B就用upstream来和A的durit联系了)</p>
-<ul>
-<li>4.获取A上的更新(但不会修改你的文件)。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git fetch upstream</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>（这不，现在B就用upstream来联系A了）</p>
-<ul>
-<li>5.合并拉取的数据<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git merge upstream/master</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>（又联系了一次，upstream/master，前者是你要合并的数据，后者是你要合并到的数据（在这里就是B本地的durit了））</p>
-<ul>
-<li>6.在B修改了本地部分内容后，把本地的更改推送到B的远程github上。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git add 修改过的文件</div><div class="line">$ git commit -m <span class="string">"注释"</span></div><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>（目前为止，B上的github就跟新了）</p>
-<ul>
-<li><p>7.然后B还想让修改过的内容也推送到A上，这就要发起pull request了。<br>打开B的github,也就是<a href="https://github.com/B/durit" target="_blank" rel="external">https://github.com/B/durit</a><br>点击Pull Requests<br>单击new pull request<br>单击create pull request<br>输入title和你更改的内容<br>然后单击send pull request<br>这样B就完成了工作，然后就等着主人A来操作了。</p>
-</li>
-<li><p>8.在B想要更新A的github上到内容时，结果冲突，因为B和A同时修改了文件，比如说是README.ME，该这样做：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git status(查看冲突文件) //找到冲突文件(README.MD)后，打开并修改，解决冲突后</div><div class="line">$ git add README.MD</div><div class="line">$ git commit -m <span class="string">"解决了冲突文件README.MD"</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>现在冲突解决了，可以更新A的内容了，也就是上面第4步和第5步</p>
 
     </div>
     <p class="post-meta">
         <span class="post-cat">分类：
-            <a class="cat-link" href="/knowledge/categories/上古神器/">上古神器</a>
+            <a class="cat-link" href="/knowledge/categories/IT/">IT</a>
         </span>
         <span class="post-tags">
             标签：
@@ -204,20 +178,16 @@
     
     <span class="prev fl">
         上一篇<br >
-        <a href="/knowledge/2017/08/01/class-relationship/">
-            
-                类与类之间的关系
-            
-        </a>
+        <a href="javascript: void(0);">没有上一篇了</a>
     </span>
     
 
     
     <span class="next fr">
         下一篇<br >
-        <a href="/knowledge/2017/06/08/python1/">
+        <a href="/knowledge/2017/10/24/20171024/">
             
-                python 学习笔记1
+                节日感想
             
         </a>
     </span>
@@ -302,7 +272,7 @@
   <script>
   JELON.Comment({
     container: 'comments',
-    label: 'git-note1' || '2017/06/17/git-note1/',
+    label: 'git-pages-themes' || '2017/11/30/git-pages-themes/',
     owner: 'JokingLove',
     repo: 'site_comments',
     clientId: 'f4feedd2e2a90cdd85e0',
